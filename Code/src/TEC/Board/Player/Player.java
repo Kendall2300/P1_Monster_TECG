@@ -11,10 +11,10 @@ public class Player implements Duelist{
     private int Mana;
     private Field field;
 
-    public Player(String name, int mana) {
+    public Player(String name) {
         Name = name;
         LifePoints = 1000;
-        Mana=mana;
+        Mana=200;
 
     }
 
