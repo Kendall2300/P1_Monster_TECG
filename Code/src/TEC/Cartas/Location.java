@@ -1,5 +1,5 @@
 package TEC.Cartas;
 
 public enum Location {
-    Deck,Hand,Gaveyard
+    Deck,Hand,Field,Graveyard
 }

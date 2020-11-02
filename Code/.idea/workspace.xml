@@ -45,7 +45,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Quiz_1" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -69,15 +69,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -104,7 +102,8 @@
       <workItem from="1603427497492" duration="90000" />
       <workItem from="1604022701836" duration="2200000" />
       <workItem from="1604102860229" duration="8876000" />
-      <workItem from="1604161731178" duration="7914000" />
+      <workItem from="1604161731178" duration="14328000" />
+      <workItem from="1604277560429" duration="11680000" />
     </task>
     <servers />
   </component>
@@ -128,18 +127,18 @@
       <screen x="0" y="0" width="1360" height="768" />
     </state>
     <state x="306" y="62" key="#Inspections/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604117247505" />
-    <state x="675" y="107" key="#com.intellij.ide.util.MemberChooser" timestamp="1604172481100">
+    <state x="675" y="107" key="#com.intellij.ide.util.MemberChooser" timestamp="1604288420740">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state x="675" y="107" key="#com.intellij.ide.util.MemberChooser/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604172481100" />
+    <state x="675" y="107" key="#com.intellij.ide.util.MemberChooser/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604288420740" />
     <state x="463" y="278" width="433" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1604024475925">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
     <state x="463" y="278" width="433" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604024475925" />
-    <state x="386" y="125" key="FileChooserDialogImpl" timestamp="1604115069790">
+    <state x="386" y="125" key="FileChooserDialogImpl" timestamp="1604177712348">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state x="386" y="125" key="FileChooserDialogImpl/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604115069790" />
+    <state x="386" y="125" key="FileChooserDialogImpl/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604177712348" />
     <state width="1315" height="192" key="GridCell.Tab.0.bottom" timestamp="1604121417623">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
@@ -176,10 +175,10 @@
       <screen x="0" y="0" width="1360" height="768" />
     </state>
     <state x="160" y="0" key="SettingsEditor/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604115605824" />
-    <state x="380" y="141" key="refactoring.ChangeSignatureDialog" timestamp="1604165436381">
+    <state x="380" y="141" key="refactoring.ChangeSignatureDialog" timestamp="1604292493903">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state x="380" y="141" key="refactoring.ChangeSignatureDialog/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604165436381" />
+    <state x="380" y="141" key="refactoring.ChangeSignatureDialog/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604292493903" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/P1_Monster_TECG$Main.ic" NAME="Main Coverage Results" MODIFIED="1604115904381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

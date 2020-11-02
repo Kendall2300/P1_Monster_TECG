@@ -1,9 +1,20 @@
 package TEC.Cartas;
 
+import TEC.Board.Board;
+
 public abstract class Carta {
     private String name;
     private int mana_cost;
     private static Location location;
+    private static Board board;
+
+    public static Board getBoard() {
+        return board;
+    }
+
+    public static void setBoard(Board board) {
+        Carta.board = board;
+    }
 
     public Carta(String name, int mana_cost) {
         this.name = name;
@@ -20,16 +31,8 @@ public abstract class Carta {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getMana_cost() {
         return mana_cost;
-    }
-
-    public void setMana_cost(int mana_cost) {
-        this.mana_cost = mana_cost;
     }
 
     public static Location getLocation() {
