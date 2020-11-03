@@ -19,7 +19,7 @@ public class Player implements Duelist{
     }
 
     @Override
-    public boolean summonEsbirro(Esbirros esbirro, Carta mana_cost) {
+    public boolean summonEsbirro(Esbirros esbirro) {
         if(Carta.getBoard().isGameOver())
             return false;
         if(this!=Carta.getBoard().getPlayer())
@@ -29,7 +29,7 @@ public class Player implements Duelist{
     }
 
     @Override
-    public boolean activateHechizo(Hechizos hechizo, Carta mana_cost) {
+    public boolean activateHechizo(Hechizos hechizo) {
         if (Carta.getBoard().isGameOver())
             return false;
         if (this!=Carta.getBoard().getPlayer())
@@ -40,7 +40,7 @@ public class Player implements Duelist{
     }
 
     @Override
-    public boolean activateSecreto(Secretos secreto,Carta mana_cost) {
+    public boolean activateSecreto(Secretos secreto) {
         return false;
     }
 
@@ -87,5 +87,17 @@ public class Player implements Duelist{
 
     public void setLifePoints(int lifePoints) {
         LifePoints = lifePoints;
+    }
+
+    public String getName() {
+        return Name;
+    }
+
+    public int getMana() {
+        return Mana;
+    }
+
+    public void setMana(int mana) {
+        Mana = mana;
     }
 }

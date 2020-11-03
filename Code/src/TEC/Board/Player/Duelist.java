@@ -6,9 +6,9 @@ import TEC.Cartas.Hechizos.Hechizos;
 import TEC.Cartas.Secretos.Secretos;
 
 public interface Duelist {
-    public boolean summonEsbirro(Esbirros esbirro, Carta mana_cost);
-    public boolean activateHechizo(Hechizos hechizo, Carta mana_cost);
-    public boolean activateSecreto(Secretos secreto, Carta mana_cost);
+    public boolean summonEsbirro(Esbirros esbirro);
+    public boolean activateHechizo(Hechizos hechizo);
+    public boolean activateSecreto(Secretos secreto);
     public boolean attackLP(Esbirros esbirro);
     public void addCardToHand();
     public void addNCardToHand(int n);

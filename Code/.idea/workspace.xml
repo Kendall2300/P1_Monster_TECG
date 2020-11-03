@@ -55,7 +55,20 @@
       <recent name="C:\Users\kenda\OneDrive\Escritorio\Tec\Proyectos\P1_Monster_TECG\Code" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Gui">
+    <configuration name="Gui" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TEC.Gui.Gui" />
+      <module name="Code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TEC.Gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TEC.Main" />
       <module name="Code" />
@@ -88,6 +101,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Gui" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JAR Application.gson-2.8.2.jar" />
       </list>
@@ -106,7 +120,7 @@
       <workItem from="1604102860229" duration="8876000" />
       <workItem from="1604161731178" duration="14328000" />
       <workItem from="1604277560429" duration="11680000" />
-      <workItem from="1604339747093" duration="12868000" />
+      <workItem from="1604339747093" duration="26952000" />
     </task>
     <servers />
   </component>
@@ -130,14 +144,14 @@
       <screen x="0" y="0" width="1360" height="768" />
     </state>
     <state x="306" y="62" key="#Inspections/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604117247505" />
-    <state x="675" y="107" key="#com.intellij.ide.util.MemberChooser" timestamp="1604354795539">
+    <state x="675" y="107" key="#com.intellij.ide.util.MemberChooser" timestamp="1604367948668">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state x="675" y="107" key="#com.intellij.ide.util.MemberChooser/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604354795539" />
-    <state x="463" y="278" width="433" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1604024475925">
+    <state x="675" y="107" key="#com.intellij.ide.util.MemberChooser/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604367948668" />
+    <state x="463" y="278" width="433" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1604360093242">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state x="463" y="278" width="433" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604024475925" />
+    <state x="463" y="278" width="433" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604360093242" />
     <state x="463" y="221" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog" timestamp="1604345202415">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
@@ -146,22 +160,22 @@
       <screen x="0" y="0" width="1360" height="768" />
     </state>
     <state x="386" y="125" key="FileChooserDialogImpl/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604177712348" />
-    <state width="1315" height="192" key="GridCell.Tab.0.bottom" timestamp="1604121417623">
+    <state width="1315" height="192" key="GridCell.Tab.0.bottom" timestamp="1604363620263">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="1315" height="192" key="GridCell.Tab.0.bottom/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604121417623" />
-    <state width="1315" height="192" key="GridCell.Tab.0.center" timestamp="1604121417623">
+    <state width="1315" height="192" key="GridCell.Tab.0.bottom/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604363620263" />
+    <state width="1315" height="192" key="GridCell.Tab.0.center" timestamp="1604363620263">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="1315" height="192" key="GridCell.Tab.0.center/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604121417623" />
-    <state width="1315" height="192" key="GridCell.Tab.0.left" timestamp="1604121417623">
+    <state width="1315" height="192" key="GridCell.Tab.0.center/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604363620263" />
+    <state width="1315" height="192" key="GridCell.Tab.0.left" timestamp="1604363620263">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="1315" height="192" key="GridCell.Tab.0.left/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604121417623" />
-    <state width="1315" height="192" key="GridCell.Tab.0.right" timestamp="1604121417623">
+    <state width="1315" height="192" key="GridCell.Tab.0.left/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604363620263" />
+    <state width="1315" height="192" key="GridCell.Tab.0.right" timestamp="1604363620263">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="1315" height="192" key="GridCell.Tab.0.right/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604121417623" />
+    <state width="1315" height="192" key="GridCell.Tab.0.right/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604363620263" />
     <state width="1315" height="239" key="GridCell.Tab.1.bottom" timestamp="1604120838520">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
@@ -182,10 +196,10 @@
       <screen x="0" y="0" width="1360" height="768" />
     </state>
     <state x="160" y="0" key="SettingsEditor/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604115605824" />
-    <state x="380" y="141" key="refactoring.ChangeSignatureDialog" timestamp="1604292493903">
+    <state x="380" y="141" key="refactoring.ChangeSignatureDialog" timestamp="1604364277686">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state x="380" y="141" key="refactoring.ChangeSignatureDialog/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604292493903" />
+    <state x="380" y="141" key="refactoring.ChangeSignatureDialog/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604364277686" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/P1_Monster_TECG$Main.ic" NAME="Main Coverage Results" MODIFIED="1604115904381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
