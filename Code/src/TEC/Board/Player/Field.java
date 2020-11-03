@@ -107,7 +107,7 @@ public class Field {
     public  void addCardToHand(){
 
     }
-    public void addNCardToHand(){
+    public void addNCardToHand(int n){
 
     }
     public Phase getPhase(){

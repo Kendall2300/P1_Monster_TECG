@@ -17,7 +17,24 @@ public class Player implements Duelist{
         Mana=200;
 
     }
-
+    @Override
+    public boolean declareAttack(Esbirros esbirro){
+        if(Carta.getBoard().isGameOver())
+            return false;
+        if(this!=Carta.getBoard().getPlayer())
+            return false;
+        boolean esbirroAttacked=this.field.declareAttack(esbirro,null);
+        return esbirroAttacked;
+    }
+    @Override
+    public boolean declareAttack(Esbirros activeEsbirro, Esbirros opponentEsbirro){
+        if(Carta.getBoard().isGameOver())
+            return false;
+        if (this!=Carta.getBoard().getPlayer())
+            return false;
+        boolean esbirroAttacked=this.field.declareAttack(activeEsbirro,opponentEsbirro);
+        return esbirroAttacked;
+    }
     @Override
     public boolean summonEsbirro(Esbirros esbirro) {
         if(Carta.getBoard().isGameOver())
@@ -27,7 +44,6 @@ public class Player implements Duelist{
 
         return true;
     }
-
     @Override
     public boolean activateHechizo(Hechizos hechizo) {
         if (Carta.getBoard().isGameOver())
@@ -38,27 +54,22 @@ public class Player implements Duelist{
         boolean spellActivated;
         return false;
     }
-
     @Override
     public boolean activateSecreto(Secretos secreto) {
         return false;
     }
-
     @Override
     public boolean attackLP(Esbirros esbirro) {
         return false;
     }
-
     @Override
     public void addCardToHand() {
-
+        this.field.addCardToHand();
     }
-
     @Override
     public void addNCardToHand(int n) {
-
+        this.field.addNCardToHand(n);
     }
-
     @Override
     public void endPhase() {
         if (Carta.getBoard().isGameOver())
@@ -67,7 +78,6 @@ public class Player implements Duelist{
             return;
         this.endPhase();
     }
-
     @Override
     public boolean endTurn() {
         if (Carta.getBoard().isGameOver())
@@ -76,27 +86,21 @@ public class Player implements Duelist{
             return false;
         return false;
     }
-
     public Field getField() {
         return field;
     }
-
     public int getLifePoints() {
         return LifePoints;
     }
-
     public void setLifePoints(int lifePoints) {
         LifePoints = lifePoints;
     }
-
     public String getName() {
         return Name;
     }
-
     public int getMana() {
         return Mana;
     }
-
     public void setMana(int mana) {
         Mana = mana;
     }

@@ -271,6 +271,7 @@ public class Controller implements ActionListener, MouseListener {
             gui.revalidate();
         }
     }
+
     @Override
     public void mouseExited(MouseEvent e) {
     }
@@ -285,16 +286,16 @@ public class Controller implements ActionListener, MouseListener {
 
     @Override
     public void actionPerformed(ActionEvent arg0) {
-        if(arg0.getSource() instanceof NextPhaseButton){
+        if (arg0.getSource() instanceof NextPhaseButton) {
             board.getPlayer().endPhase();
             gui.getCurrphase().setText("Current Phase: " + Carta.getBoard().getPlayer().getField().getPhase());
             updatefield();
         }
-        if(arg0.getSource() instanceof EndTurnButton){
+        if (arg0.getSource() instanceof EndTurnButton) {
             board.getPlayer().endTurn();
             updatefield();
         }
-        if(arg0.getSource() instanceof EsbirrosButton){
+        if (arg0.getSource() instanceof EsbirrosButton) {
             try {
                 if (fc == null) {
                     Esbirros monster = ((EsbirrosButton) arg0.getSource()).getEsbirro();
@@ -345,219 +346,182 @@ public class Controller implements ActionListener, MouseListener {
 
                     }
                 }
+            } catch (HeadlessException e) {
+                e.printStackTrace();
             }
         }
+        if (arg0.getSource() instanceof HechizosButton) {
+            if (fc == null) {
+                if (board.getPlayer().getField().getHechizosArea().contains(((HechizosButton) arg0.getSource()).getHechizo())
+                        || board.getPlayer().getField().getHand().contains(((HechizosButton) arg0.getSource()).getHechizo())) {
+                    if (((HechizosButton) arg0.getSource()).getHechizo().getLocation() == Location.Hand) {
+                        String[] buttons = {"Activate","cancel"};
 
-
-            }
-            catch(WrongPhaseException e){
-                fc = null;
-                sc = null;
-                tc = null;
-                JOptionPane.showMessageDialog(gui, "you can't set or summon a monster in this phase");
-            }
-            catch(NoEsbirrosSpaceException e){
-                fc = null;
-                sc = null;
-                tc = null;
-                JOptionPane.showMessageDialog(gui, "There is no avaialble space in monster Area");
-            }
-            catch(EsbirrosMultipleAttackException e){
-                fc = null;
-                sc = null;
-                tc = null;
-                JOptionPane.showMessageDialog(gui, "You Can Attack Only Once");
-            }
-        }
-
-        if(arg0.getSource() instanceof SpellButton){
-            if(fc instanceof MonsterButton){
-                fc = null;
-                sc=null;
-                JOptionPane.showMessageDialog(gui, "you must sacrifice a monster card");
-                return;
-            }
-            if(fc!=null &&((SpellButton)fc).getName().equalsIgnoreCase("Change Of Heart")){
-                JOptionPane.showMessageDialog(gui, "you must choose a monster card");
-                fc = null;
-                sc=null;
-                return;
-            }
-
-            if(fc==null){
-                if(board.getActivePlayer().getField().getSpellArea().contains(((SpellButton)arg0.getSource()).getSpell())
-                        || board.getActivePlayer().getField().getHand().contains(((SpellButton)arg0.getSource()).getSpell())){
-                    if(((SpellButton)arg0.getSource()).getSpell().getLocation()==Location.HAND){
-                        String[] buttons = { "Activate", "Set", "cancel"};
-
-                        int rc = JOptionPane.showOptionDialog(null, "Activate or set spell ?", "SpellCard",
+                        int rc = JOptionPane.showOptionDialog(null, "Activate hechizo ?", "SpellCard",
                                 JOptionPane.WARNING_MESSAGE, 0, null, buttons, buttons[2]);
-                        SpellButton button = (SpellButton) arg0.getSource();
-                        SpellCard card = button.getSpell();
-                        fc=button;
-                        if(rc==1){
-                            Card.getBoard().getActivePlayer().setSpell(card);
-                            fc=null;
+                        HechizosButton button = (HechizosButton) arg0.getSource();
+                        Hechizos card = button.getHechizo();
+                        fc = button;
+                        if (rc == 0) {
+                            Carta.getBoard().getPlayer().activateHechizo(card);
+                            fc = null;
                             updatefield();
                             return;
 
-                        }
-                        if(rc==2){
-                            fc=null;
-                            return;
-                        }
-                        else{
+                        } else {
                             switch (card.getName()) {
-
                                 case "Card Destruction":
-                                    board.getActivePlayer().activateSpell(card, null);
+                                    board.getPlayer().activateHechizo(card);
                                     updatefield();
                                     fc = null;
                                     return;
-                                case "Change Of Heart":
-                                    String[] options = { "ok", "cancel"};
 
+                                case "Change Of Heart":
+                                    String[] options = {"ok", "cancel"};
                                     int x = JOptionPane.showOptionDialog(null, "Choose the monster you wish to control", "SpellCard",
                                             JOptionPane.WARNING_MESSAGE, 0, null, options, options[1]);
-                                    if(x==0){
+                                    if (x == 0) {
                                         fc = button;
                                         return;
                                     }
-                                    fc=null;
+                                    fc = null;
                                     return;
                                 case "Dark Hole":
-                                    board.getActivePlayer().activateSpell(card, null);
+                                    board.getPlayer().activateHechizo(card);
                                     updatefield();
                                     fc = null;
                                     return;
                                 case "Graceful Dice":
-                                    board.getActivePlayer().activateSpell(card, null);
+                                    board.getPlayer().activateHechizo(card);
                                     updatefield();
                                     fc = null;
                                     return;
                                 case "Harpie's Feather Duster":
-                                    board.getActivePlayer().activateSpell(card, null);
+                                    board.getPlayer().activateHechizo(card);
                                     updatefield();
                                     fc = null;
                                     return;
                                 case "Heavy Storm":
-                                    board.getActivePlayer().activateSpell(card, null);
+                                    board.getPlayer().activateHechizo(card);
                                     updatefield();
                                     fc = null;
                                     return;
                                 case "Mage Power":
-                                    String[] options1 = { "ok", "cancel"};
+                                    String[] options1 = {"ok", "cancel"};
 
                                     int x1 = JOptionPane.showOptionDialog(null, "Choose the monster you wish to enhance", "SpellCard",
                                             JOptionPane.WARNING_MESSAGE, 0, null, options1, options1[1]);
-                                    if(x1==0){
+                                    if (x1 == 0) {
                                         fc = button;
                                         return;
                                     }
-                                    fc=null;
+                                    fc = null;
                                     return;
                                 case "Monster Reborn":
-                                    board.getActivePlayer().activateSpell(card, null);
+                                    board.getPlayer().activateHechizo(card);
                                     updatefield();
                                     fc = null;
                                     return;
                                 case "Pot of Greed":
-                                    board.getActivePlayer().activateSpell(card, null);
+                                    board.getPlayer().activateHechizo(card);
                                     updatefield();
                                     fc = null;
                                     return;
                                 case "Raigeki":
-                                    board.getActivePlayer().activateSpell(card, null);
+                                    board.getPlayer().activateHechizo(card);
                                     updatefield();
                                     fc = null;
                                     return;
                                 default:
-                                    board.getActivePlayer().activateSpell(((SpellButton)fc).getSpell(), null);
+                                    board.getPlayer().activateHechizo(((HechizosButton) fc).getHechizo());
                                     updatefield();
-
                             }
                         }
                     }
-                    else{
-                        String[] buttons = { "ok", "cancel"};
-
-                        int rc = JOptionPane.showOptionDialog(null, "Activate spell card ?", "SpellCard",
-                                JOptionPane.WARNING_MESSAGE, 0, null, buttons, buttons[1]);
-                        SpellButton button = (SpellButton) arg0.getSource();
-                        SpellCard card = button.getSpell();
-                        fc=button;
-                        if(rc==1){
-                            Card.getBoard().getActivePlayer().setSpell(card);
-                            fc=null;
-                            updatefield();
-                            return;
-                        }
-                        else{
-                            switch (card.getName()) {
-
-                                case "Card Destruction":
-                                    board.getActivePlayer().activateSpell(card, null);
-                                    updatefield();
-                                    fc = null;
-                                    return;
-                                case "Change Of Heart":
-                                    String[] options = { "ok", "cancel"};
-
-                                    int x = JOptionPane.showOptionDialog(null, "Choose the monster you wish to control", "SpellCard",
-                                            JOptionPane.WARNING_MESSAGE, 0, null, options, options[1]);
-                                    if(x==0){
-                                        fc = button;
-                                        return;
-                                    }
-                                    fc=null;
-                                    return;
-                                case "Dark Hole":
-                                    board.getActivePlayer().activateSpell(card, null);
-                                    updatefield();
-                                    fc = null;
-                                    return;
-                                case "Graceful Dice":
-                                    board.getActivePlayer().activateSpell(card, null);
-                                    updatefield();
-                                    fc = null;
-                                    return;
-                                case "Harpie's Feather Duster":
-                                    board.getActivePlayer().activateSpell(card, null);
-                                    updatefield();
-                                    fc = null;
-                                    return;
-                                case "Heavy Storm":
-                                    board.getActivePlayer().activateSpell(card, null);
-                                    updatefield();
-                                    fc = null;
-                                    return;
-                                case "Mage Power":
-                                    String[] options1 = { "ok", "cancel"};
-
-                                    int x1 = JOptionPane.showOptionDialog(null, "Choose the monster you wish to enhance", "SpellCard",
-                                            JOptionPane.WARNING_MESSAGE, 0, null, options1, options1[1]);
-                                    if(x1==0){
-                                        fc = button;
-                                        return;
-                                    }
-                                    fc=null;
-                                    return;
-                                case "Monster Reborn":
-                                    board.getActivePlayer().activateSpell(card, null);
-                                    updatefield();
-                                    fc = null;
-                                    return;
-                                case "Pot of Greed":
-                                    board.getActivePlayer().activateSpell(card, null);
-                                    updatefield();
-                                    fc = null;
-                                    return;
-                                case "Raigeki":
-                                    board.getActivePlayer().activateSpell(card, null);
-                                    updatefield();
-                                    fc = null;
-                                    return;
-                                default:
-                                    board.getActivePlayer().activateSpell(((SpellButton)fc).getSpell(), null);
-                                    updatefield();
+                }
+            }
+        }
+    }
 }
+        /*else{
+        String[] buttons = { "ok", "cancel"};
+
+        int rc = JOptionPane.showOptionDialog(null, "Activate spell card ?", "SpellCard",
+        JOptionPane.WARNING_MESSAGE, 0, null, buttons, buttons[1]);
+        SpellButton button = (SpellButton) arg0.getSource();
+        SpellCard card = button.getSpell();
+        fc=button;
+        if(rc==1){
+        Card.getBoard().getActivePlayer().setSpell(card);
+        fc=null;
+        updatefield();
+        return;
+        }
+        else{
+        switch (card.getName()) {
+
+        case "Card Destruction":
+        board.getActivePlayer().activateSpell(card, null);
+        updatefield();
+        fc = null;
+        return;
+        case "Change Of Heart":
+        String[] options = { "ok", "cancel"};
+
+        int x = JOptionPane.showOptionDialog(null, "Choose the monster you wish to control", "SpellCard",
+        JOptionPane.WARNING_MESSAGE, 0, null, options, options[1]);
+        if(x==0){
+        fc = button;
+        return;
+        }
+        fc=null;
+        return;
+        case "Dark Hole":
+        board.getActivePlayer().activateSpell(card, null);
+        updatefield();
+        fc = null;
+        return;
+        case "Graceful Dice":
+        board.getActivePlayer().activateSpell(card, null);
+        updatefield();
+        fc = null;
+        return;
+        case "Harpie's Feather Duster":
+        board.getActivePlayer().activateSpell(card, null);
+        updatefield();
+        fc = null;
+        return;
+        case "Heavy Storm":
+        board.getActivePlayer().activateSpell(card, null);
+        updatefield();
+        fc = null;
+        return;
+        case "Mage Power":
+        String[] options1 = { "ok", "cancel"};
+
+        int x1 = JOptionPane.showOptionDialog(null, "Choose the monster you wish to enhance", "SpellCard",
+        JOptionPane.WARNING_MESSAGE, 0, null, options1, options1[1]);
+        if(x1==0){
+        fc = button;
+        return;
+        }
+        fc=null;
+        return;
+        case "Monster Reborn":
+        board.getActivePlayer().activateSpell(card, null);
+        updatefield();
+        fc = null;
+        return;
+        case "Pot of Greed":
+        board.getActivePlayer().activateSpell(card, null);
+        updatefield();
+        fc = null;
+        return;
+        case "Raigeki":
+        board.getActivePlayer().activateSpell(card, null);
+        updatefield();
+        fc = null;
+        return;
+       default:
+        board.getActivePlayer().activateSpell(((SpellButton)fc).getSpell(), null);
+        updatefield();*/

@@ -45,12 +45,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Quiz_1" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Descargas/yu-gi-oh-java-master" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kenda\OneDrive\Escritorio\Tec\Proyectos\P1_Monster_TECG\Code\src" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\kenda\OneDrive\Escritorio\Tec\Proyectos\P1_Monster_TECG\Code" />
     </key>
@@ -82,15 +85,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -121,6 +122,7 @@
       <workItem from="1604161731178" duration="14328000" />
       <workItem from="1604277560429" duration="11680000" />
       <workItem from="1604339747093" duration="26952000" />
+      <workItem from="1604375989862" duration="6311000" />
     </task>
     <servers />
   </component>
@@ -156,26 +158,26 @@
       <screen x="0" y="0" width="1360" height="768" />
     </state>
     <state x="463" y="221" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604345202415" />
-    <state x="386" y="125" key="FileChooserDialogImpl" timestamp="1604177712348">
+    <state x="386" y="125" key="FileChooserDialogImpl" timestamp="1604377737858">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state x="386" y="125" key="FileChooserDialogImpl/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604177712348" />
-    <state width="1315" height="192" key="GridCell.Tab.0.bottom" timestamp="1604363620263">
+    <state x="386" y="125" key="FileChooserDialogImpl/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604377737858" />
+    <state width="1315" height="74" key="GridCell.Tab.0.bottom" timestamp="1604382384861">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="1315" height="192" key="GridCell.Tab.0.bottom/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604363620263" />
-    <state width="1315" height="192" key="GridCell.Tab.0.center" timestamp="1604363620263">
+    <state width="1315" height="74" key="GridCell.Tab.0.bottom/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604382384861" />
+    <state width="1315" height="74" key="GridCell.Tab.0.center" timestamp="1604382384861">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="1315" height="192" key="GridCell.Tab.0.center/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604363620263" />
-    <state width="1315" height="192" key="GridCell.Tab.0.left" timestamp="1604363620263">
+    <state width="1315" height="74" key="GridCell.Tab.0.center/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604382384861" />
+    <state width="1315" height="74" key="GridCell.Tab.0.left" timestamp="1604382384861">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="1315" height="192" key="GridCell.Tab.0.left/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604363620263" />
-    <state width="1315" height="192" key="GridCell.Tab.0.right" timestamp="1604363620263">
+    <state width="1315" height="74" key="GridCell.Tab.0.left/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604382384861" />
+    <state width="1315" height="74" key="GridCell.Tab.0.right" timestamp="1604382384861">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="1315" height="192" key="GridCell.Tab.0.right/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604363620263" />
+    <state width="1315" height="74" key="GridCell.Tab.0.right/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604382384861" />
     <state width="1315" height="239" key="GridCell.Tab.1.bottom" timestamp="1604120838520">
       <screen x="0" y="0" width="1360" height="768" />
     </state>

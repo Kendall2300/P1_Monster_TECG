@@ -256,11 +256,11 @@ public class Gui extends JFrame {
         b.startGame(p1, p2);
         setP1(p1);
         setP2(p2);
-        ImageIcon bg = new ImageIcon("");
+        ImageIcon bg = new ImageIcon("Imagenes/bg.png");
         JLabel g = new JLabel(bg);
         g.setVisible(true);
         try {
-            final Image backgroundImage = javax.imageio.ImageIO.read(new File(""));
+            final Image backgroundImage = javax.imageio.ImageIO.read(new File("Imagenes/bg2.png"));
             setContentPane(new JPanel(new BorderLayout()) {
                 @Override
                 public void paintComponent(Graphics g) {
@@ -441,14 +441,11 @@ public class Gui extends JFrame {
 
     public static void main(String[] args) throws IOException, UnexpectedFormatException {
 
-        File audioFile = new File("pain.wav");
-        boolean playCompleted = false;
-
         JFrame start = new JFrame();
         start.setSize(1366, 768);
         start.setVisible(true);
 
-        start.setContentPane(new JLabel(new ImageIcon("")));
+        start.setContentPane(new JLabel(new ImageIcon("Imagenes/Start Game.png")));
 
         start.revalidate();
         start.setLayout(null);
@@ -460,7 +457,7 @@ public class Gui extends JFrame {
         start.add(p2);
         p2.setBounds(475, 520, 400, 50);
 
-        JButton startbut = new JButton(new ImageIcon("Start Button.png"));
+        JButton startbut = new JButton(new ImageIcon("Imagenes/Start Button.png"));
         startbut.addActionListener(new ActionListener() {
 
             @Override
