@@ -4,8 +4,8 @@ import TEC.Cartas.Esbirros;
 
 public class Congelar extends Hechizos{
 
-    public Congelar(String name, int mana_cost, String efecto) {
-        super(name, mana_cost, efecto);
+    public Congelar(String name, int mana_cost) {
+        super(name, mana_cost);
     }
 
     @Override

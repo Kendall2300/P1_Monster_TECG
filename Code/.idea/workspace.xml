@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -45,17 +48,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Descargas/yu-gi-oh-java-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\kenda\OneDrive\Escritorio\Tec\Proyectos\P1_Monster_TECG\Code\src" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\kenda\OneDrive\Escritorio\Tec\Proyectos\P1_Monster_TECG\Code" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kenda\OneDrive\Escritorio\Tec\Proyectos\P1_Monster_TECG\Code\src" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Gui">
@@ -123,6 +127,10 @@
       <workItem from="1604277560429" duration="11680000" />
       <workItem from="1604339747093" duration="26952000" />
       <workItem from="1604375989862" duration="6311000" />
+      <workItem from="1604417407538" duration="16218000" />
+      <workItem from="1604437062782" duration="23289000" />
+      <workItem from="1604509634206" duration="4026000" />
+      <workItem from="1604525778714" duration="3487000" />
     </task>
     <servers />
   </component>
@@ -146,10 +154,10 @@
       <screen x="0" y="0" width="1360" height="768" />
     </state>
     <state x="306" y="62" key="#Inspections/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604117247505" />
-    <state x="675" y="107" key="#com.intellij.ide.util.MemberChooser" timestamp="1604367948668">
+    <state x="675" y="107" key="#com.intellij.ide.util.MemberChooser" timestamp="1604426677407">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state x="675" y="107" key="#com.intellij.ide.util.MemberChooser/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604367948668" />
+    <state x="675" y="107" key="#com.intellij.ide.util.MemberChooser/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604426677407" />
     <state x="463" y="278" width="433" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1604360093242">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
@@ -158,50 +166,70 @@
       <screen x="0" y="0" width="1360" height="768" />
     </state>
     <state x="463" y="221" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604345202415" />
-    <state x="386" y="125" key="FileChooserDialogImpl" timestamp="1604377737858">
+    <state x="-342" y="-583" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog" timestamp="1604526144021">
+      <screen x="-733" y="-768" width="1360" height="768" />
+    </state>
+    <state x="-342" y="-583" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog/0.0.1360.768/-733.-768.1360.768@-733.-768.1360.768" timestamp="1604526144021" />
+    <state x="597" y="137" key="#xdebugger.XInspectDialog" timestamp="1604450873365">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state x="386" y="125" key="FileChooserDialogImpl/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604377737858" />
-    <state width="1315" height="74" key="GridCell.Tab.0.bottom" timestamp="1604382384861">
+    <state x="597" y="137" key="#xdebugger.XInspectDialog/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604450873365" />
+    <state x="386" y="125" key="FileChooserDialogImpl" timestamp="1604463577897">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="1315" height="74" key="GridCell.Tab.0.bottom/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604382384861" />
-    <state width="1315" height="74" key="GridCell.Tab.0.center" timestamp="1604382384861">
+    <state x="386" y="125" key="FileChooserDialogImpl/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604463577897" />
+    <state width="1315" height="207" key="GridCell.Tab.0.bottom" timestamp="1604464568993">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="1315" height="74" key="GridCell.Tab.0.center/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604382384861" />
-    <state width="1315" height="74" key="GridCell.Tab.0.left" timestamp="1604382384861">
+    <state width="1315" height="207" key="GridCell.Tab.0.bottom/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604464568993" />
+    <state width="1315" height="207" key="GridCell.Tab.0.center" timestamp="1604464568993">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="1315" height="74" key="GridCell.Tab.0.left/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604382384861" />
-    <state width="1315" height="74" key="GridCell.Tab.0.right" timestamp="1604382384861">
+    <state width="1315" height="207" key="GridCell.Tab.0.center/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604464568993" />
+    <state width="1315" height="207" key="GridCell.Tab.0.left" timestamp="1604464568993">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="1315" height="74" key="GridCell.Tab.0.right/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604382384861" />
-    <state width="1315" height="239" key="GridCell.Tab.1.bottom" timestamp="1604120838520">
+    <state width="1315" height="207" key="GridCell.Tab.0.left/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604464568993" />
+    <state width="1315" height="207" key="GridCell.Tab.0.right" timestamp="1604464568993">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="1315" height="239" key="GridCell.Tab.1.bottom/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604120838520" />
-    <state width="1315" height="239" key="GridCell.Tab.1.center" timestamp="1604120838520">
+    <state width="1315" height="207" key="GridCell.Tab.0.right/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604464568993" />
+    <state width="1315" height="239" key="GridCell.Tab.1.bottom" timestamp="1604464568990">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="1315" height="239" key="GridCell.Tab.1.center/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604120838520" />
-    <state width="1315" height="239" key="GridCell.Tab.1.left" timestamp="1604120838520">
+    <state width="1315" height="239" key="GridCell.Tab.1.bottom/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604464568990" />
+    <state width="1315" height="239" key="GridCell.Tab.1.center" timestamp="1604464568990">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="1315" height="239" key="GridCell.Tab.1.left/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604120838520" />
-    <state width="1315" height="239" key="GridCell.Tab.1.right" timestamp="1604120838520">
+    <state width="1315" height="239" key="GridCell.Tab.1.center/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604464568990" />
+    <state width="1315" height="239" key="GridCell.Tab.1.left" timestamp="1604464568990">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="1315" height="239" key="GridCell.Tab.1.right/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604120838520" />
+    <state width="1315" height="239" key="GridCell.Tab.1.left/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604464568990" />
+    <state width="1315" height="239" key="GridCell.Tab.1.right" timestamp="1604464568990">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state width="1315" height="239" key="GridCell.Tab.1.right/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604464568990" />
     <state x="160" y="0" key="SettingsEditor" timestamp="1604115605824">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
     <state x="160" y="0" key="SettingsEditor/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604115605824" />
-    <state x="380" y="141" key="refactoring.ChangeSignatureDialog" timestamp="1604364277686">
+    <state x="260" y="39" key="editAsTableFormatDialogDimension" timestamp="1604442134986">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state x="380" y="141" key="refactoring.ChangeSignatureDialog/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604364277686" />
+    <state x="260" y="39" key="editAsTableFormatDialogDimension/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604442134986" />
+    <state x="380" y="141" key="refactoring.ChangeSignatureDialog" timestamp="1604428664998">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state x="380" y="141" key="refactoring.ChangeSignatureDialog/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604428664998" />
+    <state x="335" y="172" key="run.anything.popup" timestamp="1604448086022">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state x="335" y="172" key="run.anything.popup/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604448086022" />
+    <state x="343" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1604427036048">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state x="343" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604427036048" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/P1_Monster_TECG$Main.ic" NAME="Main Coverage Results" MODIFIED="1604115904381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

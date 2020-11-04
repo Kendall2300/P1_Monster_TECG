@@ -29,7 +29,7 @@ public class HSPanel extends JPanel {
         for (int i=0;i<p.getField().getHechizosArea().size();i++){
             if(p.getField().getHechizosArea().get(i)!=null){
                 HechizosButton hechizosButton=new HechizosButton();
-                ImageIcon img = new ImageIcon("");
+                ImageIcon img = new ImageIcon("src/Imagenes/Card Back.png");
                 Image img2=img.getImage();
                 Image newimg=img2.getScaledInstance(91,62, Image.SCALE_SMOOTH);
                 ImageIcon newIcon=new ImageIcon(newimg);

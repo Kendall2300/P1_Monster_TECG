@@ -7,7 +7,7 @@ public class EndTurnButton extends JButton {
     public EndTurnButton(String string){
         super(string);
         this.setPreferredSize(new Dimension(214,53));
-            ImageIcon ic=new ImageIcon("");
+            ImageIcon ic=new ImageIcon("Imagenes/ET.png");
             this.setIcon(ic);
             this.setOpaque(false);
             this.repaint();

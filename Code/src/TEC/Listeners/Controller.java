@@ -1,4 +1,4 @@
-package TEC.Listeners;
+/*package TEC.Listeners;
 
 import TEC.Board.Board;
 import TEC.Board.Player.Phase;
@@ -286,15 +286,6 @@ public class Controller implements ActionListener, MouseListener {
 
     @Override
     public void actionPerformed(ActionEvent arg0) {
-        if (arg0.getSource() instanceof NextPhaseButton) {
-            board.getPlayer().endPhase();
-            gui.getCurrphase().setText("Current Phase: " + Carta.getBoard().getPlayer().getField().getPhase());
-            updatefield();
-        }
-        if (arg0.getSource() instanceof EndTurnButton) {
-            board.getPlayer().endTurn();
-            updatefield();
-        }
         if (arg0.getSource() instanceof EsbirrosButton) {
             try {
                 if (fc == null) {
@@ -524,4 +515,5 @@ public class Controller implements ActionListener, MouseListener {
         return;
        default:
         board.getActivePlayer().activateSpell(((SpellButton)fc).getSpell(), null);
-        updatefield();*/
+        updatefield();
+        */

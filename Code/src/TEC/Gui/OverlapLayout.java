@@ -273,7 +273,7 @@ public class OverlapLayout implements LayoutManager2, java.io.Serializable
     /**
      *	Determine the minimum size on the Container
      *
-     *  @param	 //target   the container in which to do the layout
+     *  @param	 //co target   the container in which to do the layout
      *  @return	 the minimum dimensions needed to lay out the
      *			 subcomponents of the specified container
      */

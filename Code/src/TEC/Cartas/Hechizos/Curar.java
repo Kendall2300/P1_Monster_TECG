@@ -4,8 +4,8 @@ import TEC.Cartas.Esbirros;
 
 public class Curar extends Hechizos{
 
-    public Curar(String name, int mana_cost, String efecto) {
-        super(name, mana_cost, efecto);
+    public Curar(String name, int mana_cost) {
+        super(name, mana_cost);
     }
 
     @Override

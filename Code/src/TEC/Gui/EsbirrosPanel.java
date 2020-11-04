@@ -27,7 +27,7 @@ public class EsbirrosPanel extends JPanel {
             esbirros.get(i).setEsbirro(p.getField().getEsbirrosArea().get(i));
             esbirros.get(i).setVisible(true);
             ImageIcon newIcon;
-            ImageIcon img=new ImageIcon(""+p.getField().getEsbirrosArea().get(i).getName()+".png");
+            ImageIcon img=new ImageIcon("src/Imagenes/Esbirros/"+p.getField().getEsbirrosArea().get(i).getName()+".png");
             Image img2= img.getImage();
             Image newimg=img2.getScaledInstance(62,91, Image.SCALE_SMOOTH);
             newIcon=new ImageIcon(newimg);

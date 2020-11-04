@@ -6,6 +6,7 @@ import javax.swing.*;
 
 public class EsbirrosButton extends JButton {
     private Esbirros esbirro;
+
     public Esbirros getEsbirro(){
         return esbirro;
     }
@@ -13,6 +14,7 @@ public class EsbirrosButton extends JButton {
     public void setEsbirro(Esbirros esbirro) {
         this.esbirro = esbirro;
     }
+
     public EsbirrosButton(){
         this.setVisible(true);
     }

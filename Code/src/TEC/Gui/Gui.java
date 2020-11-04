@@ -4,6 +4,7 @@ import TEC.Board.Board;
 import TEC.Board.Player.Player;
 import TEC.Cartas.Carta;
 import TEC.Exceptions.UnexpectedFormatException;
+import TEC.Listeners.Controller1;
 
 import javax.swing.*;
 import java.awt.*;
@@ -256,11 +257,11 @@ public class Gui extends JFrame {
         b.startGame(p1, p2);
         setP1(p1);
         setP2(p2);
-        ImageIcon bg = new ImageIcon("Imagenes/bg.png");
+        ImageIcon bg = new ImageIcon("src/Imagenes/bg.png");
         JLabel g = new JLabel(bg);
         g.setVisible(true);
         try {
-            final Image backgroundImage = javax.imageio.ImageIO.read(new File("Imagenes/bg2.png"));
+            final Image backgroundImage = javax.imageio.ImageIO.read(new File("src/Imagenes/bg2.png"));
             setContentPane(new JPanel(new BorderLayout()) {
                 @Override
                 public void paintComponent(Graphics g) {
@@ -287,10 +288,10 @@ public class Gui extends JFrame {
         p2name = new JLabel(p2.getName());
         gravep1 = new JButton();
         gravep2 = new JButton();
-        lifep1 = new JLabel("Life Points:" + p1.getLifePoints());
-        lifep2 = new JLabel("Life Points:" + p2.getLifePoints());
-        deckp1 = new JLabel(p1.getField() + "");//.getDeck().getDeck().size()+"");
-        deckp2 = new JLabel("" + p2.getField());//.getDeck().getDeck().size()+"");
+        lifep1 = new JLabel("Life Points:" + p1.getLifePoints()+" Mana:"+p1.getMana());
+        lifep2 = new JLabel("Life Points:" + p2.getLifePoints()+" Mana:"+p2.getMana());
+        deckp1 = new JLabel(p1.getField().getDeck().getDeck().size()+"");
+        deckp2 = new JLabel("" + p2.getField().getDeck().getDeck().size()+"");
         handp1 = new HandPanel(p1);
         handp2 = new HandPanel(p2);
         currphase = new JLabel(Carta.getBoard().getPlayer().getField().getPhase().name());
@@ -398,7 +399,7 @@ public class Gui extends JFrame {
         lifep1.setBounds(2, 550, 311, 57);
 
 
-        imgThisImg = new ImageIcon("Cards Images Database/Card Back.png");
+        imgThisImg = new ImageIcon("src/Imagenes/Card Back.png");
         description.setIcon(imgThisImg);
 
 
@@ -420,7 +421,7 @@ public class Gui extends JFrame {
         currphase.setBounds(583, 315, 300, 100);
 
         this.validate();
-        //new Controller(b,this);
+        new Controller1(b,this);
     }
 
     public ImageIcon getImgThisImg() {
@@ -445,7 +446,7 @@ public class Gui extends JFrame {
         start.setSize(1366, 768);
         start.setVisible(true);
 
-        start.setContentPane(new JLabel(new ImageIcon("Imagenes/Start Game.png")));
+        start.setContentPane(new JLabel(new ImageIcon("src/Imagenes/Start Game.png")));
 
         start.revalidate();
         start.setLayout(null);
@@ -457,7 +458,7 @@ public class Gui extends JFrame {
         start.add(p2);
         p2.setBounds(475, 520, 400, 50);
 
-        JButton startbut = new JButton(new ImageIcon("Imagenes/Start Button.png"));
+        JButton startbut = new JButton(new ImageIcon("src/Imagenes/Start Button.png"));
         startbut.addActionListener(new ActionListener() {
 
             @Override

@@ -27,7 +27,7 @@ public class HiddenHandPanel extends JPanel {
         ArrayList<Carta> hand=p.getField().getHand();
         this.setLayout(new FlowLayout());
 
-        ImageIcon img=new ImageIcon("");
+        ImageIcon img=new ImageIcon("Imagenes/Card Back.png");
         Image img2=img.getImage();
         Image newimg=img2.getScaledInstance(100,146, Image.SCALE_SMOOTH);
         ImageIcon newIcon= new ImageIcon(newimg);

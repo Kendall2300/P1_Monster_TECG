@@ -55,7 +55,7 @@ public class HandPanel extends JPanel {
             if(hand.get(i) instanceof Esbirros){
                 esbirrosButtons.get(i).setEsbirro((Esbirros) hand.get(i));
                 esbirrosButtons.get(i).setVisible(true);
-                ImageIcon img=new ImageIcon(""+hand.get(i).getName()+".png");
+                ImageIcon img=new ImageIcon("Imagenes/Esbirros"+hand.get(i).getName()+".png");
                 Image img2=img.getImage();
                 Image newimg=img2.getScaledInstance(100,146, Image.SCALE_SMOOTH);
                 ImageIcon newIcon=new ImageIcon(newimg);
@@ -67,7 +67,7 @@ public class HandPanel extends JPanel {
             }else if(hand.get(i) instanceof Hechizos){
                 hechizosButttons.get(i).setHechizo((Hechizos) hand.get(i));
                 hechizosButttons.get(i).setVisible(true);
-                ImageIcon img=new ImageIcon(""+hand.get(i).getName()+".png");
+                ImageIcon img=new ImageIcon("Imagenes/Hechizos"+hand.get(i).getName()+".png");
                 Image img2=img.getImage();
                 Image newimg=img2.getScaledInstance(100,146, Image.SCALE_SMOOTH);
                 ImageIcon newIcon=new ImageIcon(newimg);
@@ -79,7 +79,7 @@ public class HandPanel extends JPanel {
             }else{
                 secretosButtons.get(i).setSecreto((Secretos)hand.get(i));
                 secretosButtons.get(i).setVisible(true);
-                ImageIcon img=new ImageIcon(""+hand.get(i).getName()+".png");
+                ImageIcon img=new ImageIcon("Imagenes/Secretos"+hand.get(i).getName()+".png");
                 Image img2=img.getImage();
                 Image newimg=img2.getScaledInstance(100,146, Image.SCALE_SMOOTH);
                 ImageIcon newIcon=new ImageIcon(newimg);

@@ -3,8 +3,8 @@ package TEC.Cartas.Hechizos;
 import TEC.Cartas.Esbirros;
 
 public class Desmadre extends Hechizos{
-    public Desmadre(String name, int mana_cost, String efecto) {
-        super(name, mana_cost, efecto);
+    public Desmadre(String name, int mana_cost) {
+        super(name, mana_cost);
     }
 
     @Override
