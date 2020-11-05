@@ -1,11 +1,10 @@
 package TEC.Cartas.Hechizos;
 
 import TEC.Cartas.Esbirros;
-import TEC.Cartas.Secretos.Secretos;
 
 public class Aguante extends Hechizos {
-    public Aguante(String name, int mana_cost) {
-        super(name, mana_cost);
+    public Aguante(String name, int manaCost) {
+        super(name, manaCost);
     }
 
     @Override

@@ -1,7 +1,6 @@
 package TEC.Cartas.Hechizos;
 
 import TEC.Cartas.Esbirros;
-import TEC.Cartas.Secretos.Secretos;
 
 public class HerramientasBrayan extends Hechizos {
     public HerramientasBrayan(String name, int mana_cost) {

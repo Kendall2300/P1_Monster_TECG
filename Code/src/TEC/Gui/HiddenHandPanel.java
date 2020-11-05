@@ -9,25 +9,28 @@ import java.util.ArrayList;
 
 public class HiddenHandPanel extends JPanel {
     private ArrayList<CardButton> handButtons;
+
     public HiddenHandPanel(Player p){
         super();
         update(p);
     }
+
     public ArrayList<CardButton>getHandButtons(){
         return this.handButtons;
     }
     public void setHandButtons(ArrayList<CardButton>hb){
         this.handButtons=hb;
     }
+
     public void update(Player p){
         this.removeAll();
         this.revalidate();
         handButtons=new ArrayList<CardButton>(20);
         this.setOpaque(false);
-        ArrayList<Carta> hand=p.getField().getHand();
+        ArrayList<Carta> hand = p.getField().getHand();
         this.setLayout(new FlowLayout());
 
-        ImageIcon img=new ImageIcon("Imagenes/Card Back.png");
+        ImageIcon img=new ImageIcon("src/Imagenes/Card Back.png");
         Image img2=img.getImage();
         Image newimg=img2.getScaledInstance(100,146, Image.SCALE_SMOOTH);
         ImageIcon newIcon= new ImageIcon(newimg);

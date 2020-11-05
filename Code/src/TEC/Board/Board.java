@@ -8,9 +8,11 @@ public class Board {
     private Player Player;
     private Player OpponentPlayer;
     private Player winner;
+
     public Board(){
         Carta.setBoard(this);
     }
+
     public void whoStarts(Player player1, Player player2){
         Random random=new Random();
 
@@ -22,6 +24,7 @@ public class Board {
             OpponentPlayer=player1;
         }
     }
+
     public void startGame(Player player1,Player player2){
         player1.addNCardToHand(4);
         player2.addNCardToHand(4);
@@ -30,14 +33,19 @@ public class Board {
 
         Player.addCardToHand();
     }
+
     public void nextPlayer(){
+
         Player temp= Player;
         Player=OpponentPlayer;
         OpponentPlayer=temp;
         Player.addCardToHand();
     }
+
     public boolean isGameOver(){
-        if (winner!=null) return true;
+        if (winner!=null){
+            return true;
+        }
         return false;
     }
 

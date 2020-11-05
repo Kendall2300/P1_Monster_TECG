@@ -6,7 +6,7 @@ import TEC.Cartas.Carta;
 import TEC.Cartas.Esbirros;
 import TEC.Cartas.Hechizos.Hechizos;
 import TEC.Cartas.Location;
-import TEC.Cartas.Secretos.Secretos;
+import TEC.Exceptions.EsbirrosMultipleAttackException;
 import TEC.Exceptions.NoEsbirrosSpaceException;
 import TEC.Exceptions.UnexpectedFormatException;
 import TEC.Exceptions.WrongPhaseException;
@@ -57,8 +57,6 @@ public class Controller1 implements ActionListener, MouseListener {
             hidp2.get(i).addActionListener(this);
             hidp2.get(i).addMouseListener(this);
         }
-
-
         for (int i = 0; i < handp1.size(); i++) {
             handp1.get(i).addActionListener(this);
             handp1.get(i).addMouseListener(this);
@@ -133,18 +131,6 @@ public class Controller1 implements ActionListener, MouseListener {
                 gui.revalidate();
             }
         }
-        if (e.getSource() instanceof SecretosButton) {
-            SecretosButton b = (SecretosButton) e.getSource();
-            Secretos c = b.getSecreto();
-            if (c != null) {
-                String url = "src/Imagenes/Secretos/" + c.getName() + ".png";
-
-                ImageIcon img = new ImageIcon(url);
-                gui.getDescription().setIcon(img);
-                gui.getDescription().revalidate();
-                gui.revalidate();
-            }
-        }
         if (e.getSource() instanceof CardButton) {
             ImageIcon img = new ImageIcon("src/Imagenes/Card Back.png");
             gui.getDescription().setIcon(img);
@@ -177,8 +163,8 @@ public class Controller1 implements ActionListener, MouseListener {
         }
         gui.getDeckp1().setText("" + gui.getP1().getField().getDeck().getDeck().size());
         gui.getDeckp2().setText("" + gui.getP2().getField().getDeck().getDeck().size());
-        gui.getLifep1().setText("Life Points: " + gui.getP1().getLifePoints());
-        gui.getLifep2().setText("Life Points: " + gui.getP2().getLifePoints());
+        gui.getLifep1().setText("Life Points: " + gui.getP1().getLifePoints()+"\nMana:"+gui.getP1().getMana());
+        gui.getLifep2().setText("Life Points: " + gui.getP2().getLifePoints()+"\nMana:"+gui.getP2().getMana());
         gui.getCurrphase().setText(Carta.getBoard().getPlayer().getField().getPhase().name());
         if (gui.getP1() == board.getPlayer()) {
             gui.getSp1().remove(gui.getP1hid());
@@ -262,10 +248,8 @@ public class Controller1 implements ActionListener, MouseListener {
             String url;
             if (gui.getP1().getField().getGraveyard().get(gui.getP1().getField().getGraveyard().size() - 1) instanceof Esbirros) {
                 url = "src/Imagenes/Esbirros/" + gui.getP1().getField().getGraveyard().get(gui.getP1().getField().getGraveyard().size() - 1).getName() + ".png";
-            } else if (gui.getP1().getField().getGraveyard().get(gui.getP1().getField().getGraveyard().size() - 1) instanceof Hechizos) {
-                url = "src/Imagenes/Hechizos/" + gui.getP1().getField().getGraveyard().get(gui.getP1().getField().getGraveyard().size() - 1).getName() + ".png";
             } else {
-                url = "src/Imagenes/Secretos/" + gui.getP1().getField().getGraveyard().get(gui.getP1().getField().getGraveyard().size() - 1).getName() + ".png";
+                url = "src/Imagenes/Hechizos/" + gui.getP1().getField().getGraveyard().get(gui.getP1().getField().getGraveyard().size() - 1).getName() + ".png";
             }
             ImageIcon img = new ImageIcon(url);
             Image img2 = img.getImage();
@@ -277,10 +261,8 @@ public class Controller1 implements ActionListener, MouseListener {
             String url;
             if (gui.getP2().getField().getGraveyard().get(gui.getP2().getField().getGraveyard().size() - 1) instanceof Esbirros) {
                 url = "src/Imagenes/Esbirros/" + gui.getP2().getField().getGraveyard().get(gui.getP2().getField().getGraveyard().size() - 1).getName() + ".png";
-            } else if (gui.getP2().getField().getGraveyard().get(gui.getP2().getField().getGraveyard().size() - 1) instanceof Hechizos) {
-                url = "src/Imagenes/Hechizos/" + gui.getP2().getField().getGraveyard().get(gui.getP2().getField().getGraveyard().size() - 1).getName() + ".png";
             } else {
-                url = "src/Imagenes/Secretos/" + gui.getP2().getField().getGraveyard().get(gui.getP2().getField().getGraveyard().size() - 1).getName() + ".png";
+                url = "src/Imagenes/Hechizos/" + gui.getP2().getField().getGraveyard().get(gui.getP2().getField().getGraveyard().size() - 1).getName() + ".png";
             }
             ImageIcon img = new ImageIcon(url);
             Image img2 = img.getImage();
@@ -320,32 +302,67 @@ public class Controller1 implements ActionListener, MouseListener {
                             fc = null;
                             return;
                         }
-                        if (monster.getMana_cost() <= Carta.getBoard().getPlayer().getMana()) {
-                            int mana_to_lose = monster.getMana_cost();
-                            int actual_mana = Carta.getBoard().getPlayer().getMana();
-                            Carta.getBoard().getPlayer().setMana(actual_mana - mana_to_lose);
-                            Carta.getBoard().getPlayer().summonEsbirro(monster);
-                        }
-                    } else {
-                        if (board.getPlayer().getField().getPhase() == Phase.Battle) {
-                            fc = (EsbirrosButton) e.getSource();
-                            monster = ((EsbirrosButton) fc).getEsbirro();
-                            Object[] options2 = {"Ok", "Cancel"};
-                            int y = JOptionPane.showOptionDialog(gui, "Atacar?", null, JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options2, options2[1]);
-                            if (y == 1) {
-                                fc = null;
-                                sc = null;
-                                tc = null;
-                                return;
-                            }
-                            if (board.getOpponentPlayer().getField().getEsbirrosArea().size() == 0) {
-                                board.getPlayer().declareAttack(monster);
-                                fc = null;
+                        if (summon==0){
+                            if (monster.getMana_cost() <= Carta.getBoard().getPlayer().getMana()){
+                                int mana_to_lose = monster.getMana_cost();
+                                int actual_mana = Carta.getBoard().getPlayer().getMana();
+                                Carta.getBoard().getPlayer().setMana(actual_mana - mana_to_lose);
+                                Carta.getBoard().getPlayer().summonEsbirro(monster);
+                                fc=null;
                                 updatefield();
                                 return;
                             }
-                            JOptionPane.showMessageDialog(gui, "Escoge al esbirro a atacar");
-                            return;
+                        }
+                    }else{
+                        if (board.getPlayer().getField().getPhase()!=Phase.Battle){
+                            fc=null;
+                            sc=null;
+                            tc=null;
+                            updatefield();
+                        }else{
+                            if (board.getPlayer().getField().getPhase() == Phase.Battle) {
+                                fc = (EsbirrosButton) e.getSource();
+                                monster = ((EsbirrosButton) fc).getEsbirro();
+                                Object[] options2 = {"Ok", "Cancel"};
+                                int y = JOptionPane.showOptionDialog(gui, "Atacar?", null, JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options2, options2[1]);
+                                if (y == 1) {
+                                    fc = null;
+                                    sc = null;
+                                    tc = null;
+                                    return;
+                                }
+                                if (board.getOpponentPlayer().getField().getEsbirrosArea().size() == 0) {
+                                    board.getPlayer().declareAttack(((EsbirrosButton)fc).getEsbirro());
+                                    fc = null;
+                                    updatefield();
+                                    return;
+                                }
+                                JOptionPane.showMessageDialog(gui, "Escoge al esbirro a atacar");
+                                return;
+                            }
+                        }
+                    }
+
+                }else{
+                    if(sc==null){
+                        if (fc instanceof EsbirrosButton){
+                            Esbirros monster=((EsbirrosButton)e.getSource()).getEsbirro();
+                            if (board.getPlayer().getField().getPhase()!= Phase.Battle&&board.getPlayer().getField().getEsbirrosArea().contains(monster)){
+                                JOptionPane.showMessageDialog(gui,"Debes escoger cartas de esbirros en tu campo");
+                                fc=null;
+                                sc=null;
+                                return;
+                            }
+                            if(board.getPlayer().getField().getPhase()==Phase.Battle){
+                                sc=(EsbirrosButton)e.getSource();
+                                monster = ((EsbirrosButton)sc).getEsbirro();
+                                board.getPlayer().declareAttack(((EsbirrosButton)fc).getEsbirro(),((EsbirrosButton)sc).getEsbirro());
+                                fc=null;
+                                sc=null;
+                                tc=null;
+                                updatefield();
+                                return;
+                            }
                         }
                     }
 
@@ -354,9 +371,13 @@ public class Controller1 implements ActionListener, MouseListener {
                 headlessException.printStackTrace();
             } catch (NoEsbirrosSpaceException noEsbirrosSpaceException) {
                 noEsbirrosSpaceException.printStackTrace();
-            } catch (WrongPhaseException wrongPhaseException) {
+            } catch (WrongPhaseException | EsbirrosMultipleAttackException wrongPhaseException) {
                 wrongPhaseException.printStackTrace();
             }
+        }else{//fc is spellbutton
+            //Esbirros monster=((EsbirrosButton)e.getSource()).getEsbirro();
+
+
         }
     }
 }

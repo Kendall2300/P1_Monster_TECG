@@ -1,7 +1,7 @@
 package TEC.Cartas.Hechizos;
 
 import TEC.Cartas.Esbirros;
-import TEC.Cartas.Secretos.Secretos;
+
 
 public class SoloPostres extends Hechizos {
     public SoloPostres(String name, int mana_cost) {

@@ -252,7 +252,7 @@ public class Gui extends JFrame {
     }
 
     public Gui(Player p1, Player p2) throws IOException, UnexpectedFormatException {
-        super("TECG!");
+        super("P1_MonsterTECG!");
         Board b = new Board();
         b.startGame(p1, p2);
         setP1(p1);
@@ -288,10 +288,10 @@ public class Gui extends JFrame {
         p2name = new JLabel(p2.getName());
         gravep1 = new JButton();
         gravep2 = new JButton();
-        lifep1 = new JLabel("Life Points:" + p1.getLifePoints()+" Mana:"+p1.getMana());
-        lifep2 = new JLabel("Life Points:" + p2.getLifePoints()+" Mana:"+p2.getMana());
+        lifep1 = new JLabel("Life Points:" + p1.getLifePoints()+"\nMana:"+p1.getMana());
+        lifep2 = new JLabel("Life Points:" + p2.getLifePoints()+"\nMana:"+p2.getMana());
         deckp1 = new JLabel(p1.getField().getDeck().getDeck().size()+"");
-        deckp2 = new JLabel("" + p2.getField().getDeck().getDeck().size()+"");
+        deckp2 = new JLabel("" + p2.getField().getDeck().getDeck().size());
         handp1 = new HandPanel(p1);
         handp2 = new HandPanel(p2);
         currphase = new JLabel(Carta.getBoard().getPlayer().getField().getPhase().name());
@@ -300,7 +300,7 @@ public class Gui extends JFrame {
         deckp1.setForeground(Color.WHITE);
         deckp2.setFont(new Font("Ariel", Font.BOLD, 15));
         deckp2.setForeground(Color.WHITE);
-        ImageIcon grave = new ImageIcon("");
+        ImageIcon grave = new ImageIcon("src/Imagenes/Graveyard.png");
         gravep1.setIcon(grave);
         gravep2.setIcon(grave);
 
@@ -338,7 +338,7 @@ public class Gui extends JFrame {
             sp1.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_NEVER);
             panel1.add(sp1, BorderLayout.SOUTH);
             this.revalidate();
-        } else {
+        }else{
             sp1 = new JScrollPane(p1hid);
             sp1.setBorder(null);
             sp1.getViewport().setOpaque(false);
@@ -472,11 +472,9 @@ public class Gui extends JFrame {
                     try {
                         Gui gui = new Gui(new Player(p1.getText()), new Player(p2.getText()));
                     } catch (IOException | UnexpectedFormatException e1) {
-                        // TODO Auto-generated catch block
                         e1.printStackTrace();
                     }
                 }
-
             }
         });
         startbut.setBounds(510, 637, 311, 57);

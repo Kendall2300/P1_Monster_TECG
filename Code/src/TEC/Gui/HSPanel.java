@@ -15,15 +15,17 @@ public class HSPanel extends JPanel {
         setPreferredSize(new Dimension(500,100));
         update(p);
     }
+
     public void setSpells(ArrayList<JButton>spells){
         this.spells=spells;
     }
     public ArrayList<JButton> getSpells(){
         return spells;
     }
+
     private void update(Player p) {
         spells=new ArrayList<JButton>();
-        this.setLayout(new GridLayout(1,2));
+        this.setLayout(new GridLayout(1,5));
         this.setOpaque(false);
         this.setVisible(true);
         for (int i=0;i<p.getField().getHechizosArea().size();i++){
@@ -40,7 +42,7 @@ public class HSPanel extends JPanel {
                 this.add(hechizosButton);
             }
         }
-        for (int i=0;i<2-p.getField().getHechizosArea().size();i++){
+        for (int i=0;i<5-p.getField().getHechizosArea().size();i++){
             JButton but=new JButton();
             but.setOpaque(false);
             but.setOpaque(false);

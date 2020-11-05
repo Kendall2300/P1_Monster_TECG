@@ -10,10 +10,10 @@ public class HechizosButton extends JButton {
     public Hechizos getHechizo(){
         return hechizo;
     }
-
     public void setHechizo(Hechizos hechizo) {
         this.hechizo = hechizo;
     }
+
     public HechizosButton(){
         super();
         this.setVisible(true);

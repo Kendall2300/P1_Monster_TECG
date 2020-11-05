@@ -13,7 +13,7 @@ public class EsbirrosPanel extends JPanel {
         super();
         setPreferredSize(new Dimension(500,100));
         esbirros=new ArrayList<EsbirrosButton>();
-        this.setLayout(new GridLayout(1,3));
+        this.setLayout(new GridLayout(1,5));
         this.setOpaque(true);
         this.setVisible(true);
         for (int i=0;i<5;i++){
@@ -43,7 +43,6 @@ public class EsbirrosPanel extends JPanel {
     public ArrayList<EsbirrosButton> getEsbirros() {
         return esbirros;
     }
-
     public void setEsbirros(ArrayList<EsbirrosButton> esbirros) {
         this.esbirros = esbirros;
     }
