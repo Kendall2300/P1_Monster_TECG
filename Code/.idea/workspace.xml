@@ -55,12 +55,12 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\kenda\OneDrive\Escritorio\Tec\Proyectos\P1_Monster_TECG\Code" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kenda\OneDrive\Escritorio\Tec\Proyectos\P1_Monster_TECG\Code\src\Imagenes\Hechizos" />
       <recent name="C:\Users\kenda\OneDrive\Escritorio\Tec\Proyectos\P1_Monster_TECG\Code\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kenda\OneDrive\Escritorio\Tec\Proyectos\P1_Monster_TECG\Code" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Gui">
@@ -135,7 +135,7 @@
       <workItem from="1604549700372" duration="206000" />
       <workItem from="1604603972455" duration="16304000" />
       <workItem from="1604628174614" duration="9469000" />
-      <workItem from="1604672186144" duration="10494000" />
+      <workItem from="1604672186144" duration="14656000" />
     </task>
     <servers />
   </component>
