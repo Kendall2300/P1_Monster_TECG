@@ -308,13 +308,16 @@ public class Gui extends JFrame {
         p1hid = new HiddenHandPanel(p1);
         p2hid = new HiddenHandPanel(p2);
 
-        p2name.setFont(new Font("Century Gothic", Font.BOLD, 25));
+        p2name.setFont(new Font("Century Gothic", Font.BOLD, 20));
         p2name.setForeground(Color.BLACK);
 
-        lifep2.setFont(new Font("Century Gothic", Font.BOLD, 20));
+        lifep2.setFont(new Font("Century Gothic", Font.BOLD, 15));
         lifep2.setForeground(Color.BLACK);
 
-        p1name.setFont(new Font("Century Gothic", Font.BOLD, 25));
+        lifep1.setFont(new Font("Century Gothic", Font.BOLD, 15));
+        lifep1.setForeground(Color.BLACK);
+
+        p1name.setFont(new Font("Century Gothic", Font.BOLD, 20));
         p1name.setForeground(Color.BLACK);
 
         currphase.setFont(new Font("Century Gothic", Font.BOLD, 20));

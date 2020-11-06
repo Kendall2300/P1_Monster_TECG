@@ -152,8 +152,8 @@ public class Deck {
 
             if (cardInfo[0].contains("Esbirros")) {
 
-                temp.add(new Esbirros(cardInfo[1], Integer.parseInt(cardInfo[2]), Integer
-                        .parseInt(cardInfo[3])));
+                temp.add(new Esbirros(cardInfo[1], Integer.parseInt(cardInfo[3]), Integer
+                        .parseInt(cardInfo[2])));
 
             }else{
                 if (!cardInfo[0].contains("Hechizos")){

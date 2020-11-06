@@ -141,7 +141,6 @@ public class Controller1 implements ActionListener, MouseListener {
 
     @Override
     public void mouseExited(MouseEvent e) {
-
     }
 
     private void updatefield() {
@@ -281,33 +280,34 @@ public class Controller1 implements ActionListener, MouseListener {
         }
         if (e.getSource() instanceof EndTurnButton) {
             int actual_mana=board.getPlayer().getMana();
-            int mana_to_win=250;
+            //int mana_to_win=250;
+            board.getPlayer().setMana(actual_mana+250);
             board.getPlayer().endTurn();
-            board.getPlayer().setMana(actual_mana+mana_to_win);
             updatefield();
         }
         if (e.getSource() instanceof EsbirrosButton) {
             try {
                 if (fc == null) {
+
                     Esbirros monster = ((EsbirrosButton) e.getSource()).getEsbirro();
-                    //fc=button
+                    //fc=button;
 
                     if (monster.getLocation() == Location.Hand) {
                         fc = (EsbirrosButton) e.getSource();
                         monster = ((EsbirrosButton) fc).getEsbirro();
-                        //fc=button
+                        //fc=button;
                         Object[] options = {"Summon", "Cancel"};
                         summon = JOptionPane.showOptionDialog(gui, "Summon?", null, JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[1]);
                         if (summon == 1) {
                             fc = null;
                             return;
                         }
-                        if (summon==0){
-                            if (monster.getMana_cost() <= Carta.getBoard().getPlayer().getMana()){
+                        if(monster.getMana_cost() <= Carta.getBoard().getPlayer().getMana()){
+                            if (summon==0){
                                 int mana_to_lose = monster.getMana_cost();
                                 int actual_mana = Carta.getBoard().getPlayer().getMana();
-                                Carta.getBoard().getPlayer().setMana(actual_mana - mana_to_lose);
                                 Carta.getBoard().getPlayer().summonEsbirro(monster);
+                                Carta.getBoard().getPlayer().setMana(actual_mana - mana_to_lose);
                                 fc=null;
                                 updatefield();
                                 return;
@@ -342,12 +342,11 @@ public class Controller1 implements ActionListener, MouseListener {
                             }
                         }
                     }
-
                 }else{
                     if(sc==null){
                         if (fc instanceof EsbirrosButton){
                             Esbirros monster=((EsbirrosButton)e.getSource()).getEsbirro();
-                            if (board.getPlayer().getField().getPhase()!= Phase.Battle&&board.getPlayer().getField().getEsbirrosArea().contains(monster)){
+                            if (board.getPlayer().getField().getPhase()!= Phase.Battle && !board.getPlayer().getField().getEsbirrosArea().contains(monster)){
                                 JOptionPane.showMessageDialog(gui,"Debes escoger cartas de esbirros en tu campo");
                                 fc=null;
                                 sc=null;
@@ -368,16 +367,28 @@ public class Controller1 implements ActionListener, MouseListener {
 
                 }
             } catch (HeadlessException headlessException) {
+                fc=null;
+                sc=null;
+                tc=null;
                 headlessException.printStackTrace();
+                System.out.println("error head");
             } catch (NoEsbirrosSpaceException noEsbirrosSpaceException) {
+                fc=null;
+                sc=null;
+                tc=null;
                 noEsbirrosSpaceException.printStackTrace();
+                System.out.println("erro space");
             } catch (WrongPhaseException | EsbirrosMultipleAttackException wrongPhaseException) {
+                fc=null;
+                sc=null;
+                tc=null;
                 wrongPhaseException.printStackTrace();
+                System.out.println("error mal phase");
             }
-        }else{//fc is spellbutton
-            //Esbirros monster=((EsbirrosButton)e.getSource()).getEsbirro();
-
-
+        }
+        if(e.getSource() instanceof HechizosButton){
+            //else{//fc is spellbutton
+            System.out.println("Pasando...");
         }
     }
 }
