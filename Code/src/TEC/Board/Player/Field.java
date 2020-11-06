@@ -11,6 +11,13 @@ import java.util.ArrayList;
 
 import static TEC.Board.Player.Phase.MainPhase;
 
+/**
+ * Field
+ * Esta clase se encarga de construir o generar el campo para cada jugador
+ *
+ * @author Kendall Martinez && Daniel Montoya
+ * @version 1.8
+ */
 public class Field {
     private Phase phase=MainPhase;
     private final Deck deck;
@@ -19,6 +26,12 @@ public class Field {
     private ArrayList<Carta> graveyard;
     private ArrayList<Carta> hand;
 
+    /**
+     * Field
+     * Este constructor 
+     * @throws IOException
+     * @throws UnexpectedFormatException
+     */
     public Field()throws IOException, UnexpectedFormatException {
 
         esbirrosArea=new ArrayList<Esbirros>();

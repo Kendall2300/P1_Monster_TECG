@@ -263,8 +263,7 @@ public class Gui extends JFrame {
         try {
             final Image backgroundImage = javax.imageio.ImageIO.read(new File("src/Imagenes/bg2.png"));
             setContentPane(new JPanel(new BorderLayout()) {
-                @Override
-                public void paintComponent(Graphics g) {
+                @Override public void paintComponent(Graphics g) {
                     g.drawImage(backgroundImage, 0, 0, null);
                 }
             });
@@ -308,16 +307,16 @@ public class Gui extends JFrame {
         p1hid = new HiddenHandPanel(p1);
         p2hid = new HiddenHandPanel(p2);
 
-        p2name.setFont(new Font("Century Gothic", Font.BOLD, 20));
+        p2name.setFont(new Font("Century Gothic", Font.BOLD, 19));
         p2name.setForeground(Color.BLACK);
 
-        lifep2.setFont(new Font("Century Gothic", Font.BOLD, 15));
+        lifep2.setFont(new Font("Century Gothic", Font.BOLD, 14));
         lifep2.setForeground(Color.BLACK);
 
-        lifep1.setFont(new Font("Century Gothic", Font.BOLD, 15));
+        lifep1.setFont(new Font("Century Gothic", Font.BOLD, 14));
         lifep1.setForeground(Color.BLACK);
 
-        p1name.setFont(new Font("Century Gothic", Font.BOLD, 20));
+        p1name.setFont(new Font("Century Gothic", Font.BOLD, 19));
         p1name.setForeground(Color.BLACK);
 
         currphase.setFont(new Font("Century Gothic", Font.BOLD, 20));
@@ -340,7 +339,7 @@ public class Gui extends JFrame {
             sp1.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
             sp1.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_NEVER);
             panel1.add(sp1, BorderLayout.SOUTH);
-            this.revalidate();
+        this.revalidate();
         }else{
             sp1 = new JScrollPane(p1hid);
             sp1.setBorder(null);
@@ -369,7 +368,7 @@ public class Gui extends JFrame {
             sp2.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
             sp2.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_NEVER);
             panel2.add(sp2, BorderLayout.NORTH);
-            this.revalidate();
+        this.revalidate();
         } else {
             sp2 = new JScrollPane(p2hid);
             sp2.setBorder(null);

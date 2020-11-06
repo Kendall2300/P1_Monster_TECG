@@ -15,6 +15,16 @@ import java.util.Collections;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * Clase Deck de la aplicacion
+ *
+ *  Esta clase se encarga de leer, crear y construir el deck que sera utilizado por cada uno de los jugadores durante el juego.
+ *
+ * @author Kendall Martinez && Daniel Montoya
+ * @version 1.8
+ *
+ *
+ */
 public class Deck {
     private static ArrayList<Carta> esbirros;
     private static ArrayList<Carta> hechizos;
@@ -25,6 +35,15 @@ public class Deck {
     private final ArrayList<Carta> deck;
     int trials = 0;
 
+    /**
+     * Metodo contructor del Deck
+     *
+     * Se encarga de llamar a otros metodos para construir el deck, devuelve un objeto de tipo deck.
+     *
+     * @throws IOException
+     * @throws NumberFormatException
+     * @throws UnexpectedFormatException
+     */
     public Deck() throws IOException, NumberFormatException, UnexpectedFormatException {
         if ((esbirros == null) || (hechizos == null)) {
 
@@ -82,20 +101,25 @@ public class Deck {
                         Deck.setMonstersPath(path);
                     else
                         Deck.setSpellsPath(path);
-
                 }
 
             }
-
             sc.close();
-
         }
-
         deck = new ArrayList<Carta>();
         buildDeck(esbirros, hechizos);
         shuffleDeck();
     }
 
+    /**
+     * loadCardsFromFile
+     * Este método lee de la base de datos o un file para definir los parámetros e imágenes de las cartas
+     *
+     * @param path Un string que lleve a la ubicación de la base de datos de donde se van a leer los parámetros.
+     * @return Una lista de array con las cartas generadas que se leyeron de la base de datos
+     * @throws IOException
+     * @throws UnexpectedFormatException
+     */
     public ArrayList<Carta> loadCardsFromFile(String path) throws IOException,
             UnexpectedFormatException {
 
@@ -233,7 +257,14 @@ public class Deck {
     }
 
 
-
+    /**
+     * buildDeck
+     * Este método se encarga de leer una lista de cartas y generar de forma aleatoria el deck dependiendo de una cuota
+     * de esbirros y hechizos(secretos y hechizos)
+     *
+     * @param esbirros Una lista que contenga varios esbirros
+     * @param hechizos Una lista que contenga tanto secretos como hechizos
+     */
     private void buildDeck(ArrayList<Carta> esbirros, ArrayList<Carta> hechizos ) {
 
         int esbirrosQouta = 10;
@@ -452,12 +483,22 @@ public class Deck {
         }
     }
 
+    /**
+     * shuffleDeck
+     * Este método se encarga de barajar el deck
+     */
     private void shuffleDeck() {
 
         Collections.shuffle(deck);
 
     }
 
+    /**
+     * drawNCards
+     * Este método permite robar una cantidad de cartas específica.
+     * @param n Un entero que identifica la cantidad de cartas a robar del deck
+     * @return Las cartas que se robaron del deck
+     */
     public ArrayList<Carta> drawNCards(int n) {
 
         ArrayList<Carta> cards = new ArrayList<Carta>(n);
@@ -469,43 +510,93 @@ public class Deck {
 
     }
 
+    /**
+     * drawOneCard
+     * Este método te permite robar una carta del deck siempre la de la parte superior
+     * @return La carta robada del deck
+     */
     public Carta drawOneCard() {
         return (deck.remove(0));
 
     }
 
+    /**
+     * getMonsters
+     * Este método te devuelve los esbirros generados
+     * @return Una lista de esbirros
+     */
     public static ArrayList<Carta> getMonsters() {
         return esbirros;
     }
 
+    /**
+     * setMonsters
+     * Este método coloca la lista de esbirros
+     * @param esbirros Una lista de cartas que contiene a los esbirros
+     */
     public static void setMonsters(ArrayList<Carta> esbirros) {
         Deck.esbirros = esbirros;
     }
 
+    /**
+     * getSpells
+     * Este método obtiene la lista de Hechizos y Secretos
+     * @return Una lista de Hechizos y Secretos
+     */
     public static ArrayList<Carta> getSpells() {
         return hechizos;
     }
 
+    /**
+     * setSpells
+     * Este método coloca la lista de Secretos y Hechizos
+     * @param hechizos Una lista de Hechizos y Secretos
+     */
     public static void setSpells(ArrayList<Carta> hechizos) {
         Deck.hechizos = hechizos;
     }
 
+    /**
+     * getDeck
+     * Este método obtiene el valor del deck que es una lista de cartas tanto de hechizos y secretos
+     * @return Una lista de cartas
+     */
     public ArrayList<Carta> getDeck() {
         return deck;
     }
 
+    /**
+     * getMonstersPath
+     * Este método obtiene la ruta a la base de datos que contiene los datos o parámetros de los esbirros
+     * @return Un string que es la ruta al archivo
+     */
     public static String getMonstersPath() {
         return esbirrospath;
     }
 
+    /**
+     * setMosntersPath
+     * Este método coloca la ruta a la base de datos que contiene los datos o parámetros de los esbirros
+     * @param esbirrospath Un string que posee la ruta al archivo
+     */
     public static void setMonstersPath(String esbirrospath) {
         Deck.esbirrospath = esbirrospath;
     }
 
+    /**
+     * getSpellsPath
+     * Este método obtiene la ruta a la base de datos que contiene los parámetros o datos de los secretos y hechizos
+     * @return Un string que posee la ruta al archivo
+     */
     public static String getSpellsPath() {
         return hechizospath;
     }
 
+    /**
+     * setSpellsPath
+     * Este método coloca la ruta a la base de datos que contiene los parámetros o datos de los secretos y hechizos
+     * @param hechizospath Un string que posee la ruta al archivo
+     */
     public static void setSpellsPath(String hechizospath) {
         Deck.hechizospath = hechizospath;
     }

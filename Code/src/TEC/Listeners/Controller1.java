@@ -93,15 +93,6 @@ public class Controller1 implements ActionListener, MouseListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
-    }
-
-    @Override
-    public void mousePressed(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent e) {
 
     }
 
@@ -143,6 +134,16 @@ public class Controller1 implements ActionListener, MouseListener {
     public void mouseExited(MouseEvent e) {
     }
 
+    @Override
+    public void mousePressed(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+
+    }
+
     private void updatefield() {
         if (board.isGameOver()) {
             Object[] options = {"End Game!", "Start New Game"};
@@ -153,9 +154,7 @@ public class Controller1 implements ActionListener, MouseListener {
                 try {
                     Gui.main(null);
                     gui.setVisible(false);
-                } catch (IIOException | UnexpectedFormatException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
+                } catch (UnexpectedFormatException | IOException e) {
                     e.printStackTrace();
                 }
             }
@@ -269,6 +268,8 @@ public class Controller1 implements ActionListener, MouseListener {
             ImageIcon newIcon = new ImageIcon(newimg);
             gui.getGravep2().setIcon(newIcon);
         }
+        addActionListeners();
+        gui.revalidate();
     }
 
     @Override
@@ -383,7 +384,7 @@ public class Controller1 implements ActionListener, MouseListener {
                 sc=null;
                 tc=null;
                 wrongPhaseException.printStackTrace();
-                System.out.println("error mal phase");
+                System.out.println("Error mal phase");
             }
         }
         if(e.getSource() instanceof HechizosButton){
