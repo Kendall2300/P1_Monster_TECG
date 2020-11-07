@@ -9,20 +9,51 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
+/**
+ * HandPanel
+ * Esta clase se encarga de construir el panel donde
+ * serán colocados los botones de las cartas que un jugador posee en mano
+ *
+ * @author Kendall Martinez && Daniel Montoya
+ * @version 1.8
+ */
 public class HandPanel extends JPanel {
     private ArrayList<EsbirrosButton> esbirrosButtons;
     private ArrayList<HechizosButton> hechizosButttons;
+
+    /**
+     * HandPanel
+     * Este metodo se encarga de construir el panel de la mano para un jugador que es pasado como parametro
+     * @param p Un objeto de tipo Player
+     */
     public HandPanel(Player p){
         super();
         update(p);
     }
+
+    /**
+     * getHandButtons
+     * Este metodo se encarga de obtener el array de botones de esbirro que el jugador posee en la mano
+     * @return  Un array de EsbirrosButton
+     */
     public ArrayList<EsbirrosButton> getHandButtons(){
         return this.esbirrosButtons;
     }
+
+    /**
+     * setHandButtons
+     * Este metodo se encarga de colocar el array de botones de esbirros en el panel de la mano del jugador
+     * @param hb Un array de EsbirrosButton
+     */
     public void setHandButtons(ArrayList<EsbirrosButton> hb){
         this.esbirrosButtons=hb;
     }
 
+    /**
+     * update
+     * Este metodo se encarga de actualizar la mano del jugador que es pasado como parámetro
+     * @param p Un objeto de tipo Player
+     */
     public void update(Player p){
         this.removeAll();
         this.revalidate();
@@ -74,15 +105,39 @@ public class HandPanel extends JPanel {
         }
     }
 
+    /**
+     * getEsbirrosButtons
+     * Este metodo se encarga de obtner los botones esbirros que están en el panel de la mano del jugador
+     * @return Un array de EsbirrosButtons
+     */
     public ArrayList<EsbirrosButton> getEsbirrosButtons() {
         return esbirrosButtons;
     }
+
+    /**
+     * setEsbirrosButtons
+     * Este metodo se encarga de colocar o definir los botones esbirros que estarán en el panel de la mano del jugador
+     * @param esbirrosButtons Un array de EsbirrosButton
+     */
     public void setEsbirrosButtons(ArrayList<EsbirrosButton> esbirrosButtons) {
         this.esbirrosButtons = esbirrosButtons;
     }
+
+    /**
+     * getHechizosButtons
+     * Este metodo se encarga de obtner los botones de hechizos y secretos que están en el panel de la mano del jugador
+     * @return Un array de tipo HechizosButton
+     */
     public ArrayList<HechizosButton> getHechizosButttons() {
         return hechizosButttons;
     }
+
+    /**
+     * setHechizosButtons
+     * Este metodo se encarga de colocar o definir los valores de los botones hechizos y secretos que están
+     * en el panel de la mano del jugador
+     * @param hechizosButttons Un array de HechizosButton
+     */
     public void setHechizosButttons(ArrayList<HechizosButton> hechizosButttons) {
         this.hechizosButttons = hechizosButttons;
     }
