@@ -6,6 +6,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
+/**
+ * EsbirrosPanel
+ * Esta clase se encarga de generar el panel de 
+ */
 public class EsbirrosPanel extends JPanel {
     private ArrayList<EsbirrosButton> esbirros;
 
