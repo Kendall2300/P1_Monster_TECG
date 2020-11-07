@@ -8,6 +8,6 @@ public class CilindrosMagicos extends Hechizos {
     }
 
     @Override
-    public void action(Esbirros esbirro) {
+    public void action(Esbirros esbirro) { //Falta
     }
 }

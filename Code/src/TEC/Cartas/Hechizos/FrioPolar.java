@@ -1,5 +1,6 @@
 package TEC.Cartas.Hechizos;
 
+import TEC.Board.Player.Phase;
 import TEC.Cartas.Esbirros;
 
 public class FrioPolar extends Hechizos{
@@ -9,6 +10,9 @@ public class FrioPolar extends Hechizos{
 
     @Override
     public void action(Esbirros esbirro) {
+        if (getBoard().getOpponentPlayer().getField().getPhase() == Phase.Battle){
+            getBoard().getOpponentPlayer().endPhase();
+        }
 
     }
 }

@@ -9,6 +9,6 @@ public class RoboMagico extends Hechizos{
 
     @Override
     public void action(Esbirros esbirro) {
-
+        getBoard().getPlayer().addCardToHand();
     }
 }

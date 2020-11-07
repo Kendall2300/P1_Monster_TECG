@@ -9,14 +9,14 @@ public class Joker extends Hechizos {
 
     @Override
     public void action(Esbirros esbirro) {
-        /*int lp_to_gain=50;
-        int lpy=getBoard().getPlayer().getLifePoints()
-        int lpo=getBoard().getOpponentPlayer().getLifePoints()
+        int lp_to_gain=50;
+        int lpy=getBoard().getPlayer().getLifePoints();
+        int lpo=getBoard().getOpponentPlayer().getLifePoints();
         if((lpy+lp_to_gain)>1000){
-            return getBoard().getPlayer().setLifePoints(1000)
+            getBoard().getPlayer().setLifePoints(1000);
         }else{
-            return getBoard().getPlayer().setLifePoints(lpy+lp_to_gain)
+            getBoard().getPlayer().setLifePoints(lpy+lp_to_gain);
         }
-         */
+
     }
 }

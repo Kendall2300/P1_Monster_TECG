@@ -2,7 +2,7 @@ package TEC.Cartas.Hechizos;
 
 import TEC.Cartas.Esbirros;
 
-public class El_gran_Keto extends Hechizos{
+public class El_gran_Keto extends Hechizos{//Completo
     public El_gran_Keto(String name, int mana_cost){
         super(name,mana_cost);
     }

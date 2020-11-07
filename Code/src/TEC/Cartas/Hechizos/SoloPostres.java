@@ -10,13 +10,12 @@ public class SoloPostres extends Hechizos {
 
     @Override
     public void action(Esbirros esbirro) {
-        /*int lp=getBoard().getOpponetPlayer().getlifePoints();
+        int lp=getBoard().getOpponentPlayer().getLifePoints();
         int lp_to_lose=500;
         if((lp-lp_to_lose)<0){
-            return getBoard().getOpponentPlayer().setLifePoints(0);
-
+            getBoard().getOpponentPlayer().setLifePoints(0);
         }else{
-            return getBoard().getOpponentPlayer().setLifePoints(lp-lp_to_lose);
-         */
+            getBoard().getOpponentPlayer().setLifePoints(lp-lp_to_lose);
+         }
     }
 }

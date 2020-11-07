@@ -9,13 +9,14 @@ public class HerramientasBrayan extends Hechizos {
 
     @Override
     public void action(Esbirros esbirro) {
-        /*int lp=getBoard().getPlayer().getlifePoints();
-        int lp_to_lose=150;
-        if((lp-lp_to_lose)<0){
-            return getBoard().getPlayer().setLifePoints(0);
+        int lp = getBoard().getPlayer().getLifePoints();
+        int lp_to_lose = 150;
+        if ((lp - lp_to_lose) < 0) {
+            getBoard().getPlayer().setLifePoints(0);
 
-        }else{
-            return getBoard().getPlayer().setLifePoints(lp-lp_to_lose);
-         */
+        } else {
+            getBoard().getPlayer().setLifePoints(lp - lp_to_lose);
+
+        }
     }
 }

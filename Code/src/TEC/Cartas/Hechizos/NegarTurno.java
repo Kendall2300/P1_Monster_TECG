@@ -10,6 +10,9 @@ public class NegarTurno extends Hechizos {
 
     @Override
     public void action(Esbirros esbirro) {
+        getBoard().getOpponentPlayer().addCardToHand();
+        getBoard().getOpponentPlayer().endTurn();
+
 
     }
 }

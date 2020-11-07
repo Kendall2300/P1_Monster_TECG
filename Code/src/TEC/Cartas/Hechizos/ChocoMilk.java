@@ -8,7 +8,8 @@ public class ChocoMilk extends Hechizos{
     }
 
     @Override
-    public void action(Esbirros esbirro) {
+    public void action(Esbirros esbirro) { // Completo
+        getBoard().getOpponentPlayer().setLifePoints(getBoard().getOpponentPlayer().getLifePoints() - 50);
 
     }
 }

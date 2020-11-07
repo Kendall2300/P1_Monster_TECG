@@ -8,14 +8,15 @@ public class Aguante extends Hechizos {
     }
 
     @Override
-    public void action(Esbirros esbirro) {
-        //int lp=getBoard().getPlayer().getLifePoints()
-        /*
-        if((lp-x)<0)){
-            return getBoard().getPlayer().setLifePoints(1)
+    public void action(Esbirros esbirro) { //Completo
+        int lp=getBoard().getPlayer().getLifePoints();
+
+        if(lp <= 0){
+            getBoard().getPlayer().setLifePoints(1);
+            return;
         }else{
-            continue
+            return;
         }
-         */
+
     }
 }

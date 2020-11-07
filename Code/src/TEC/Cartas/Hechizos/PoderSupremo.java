@@ -10,6 +10,6 @@ public class PoderSupremo extends Hechizos{
 
     @Override
     public void action(Esbirros esbirro) {
-
+        getBoard().getPlayer().addNCardToHand(3);
     }
 }

@@ -9,8 +9,8 @@ public class LlamadaImpura extends Hechizos{
 
     @Override
     public void action(Esbirros esbirro) {
-        /*int lp=getBoard().getOpponetPlayer().getlifePoints();
+        int lp=getBoard().getOpponentPlayer().getLifePoints();
         int lp_to_lose = (int) Math.floor(Math.random()*(1-1000+1)+1000);
-        getBoard().getOpponentPlayer().setLifePoints(lp-lp_to_lose);*/
+        getBoard().getOpponentPlayer().setLifePoints(lp-lp_to_lose);
     }
 }
