@@ -28,17 +28,32 @@ public class HechizosButton extends JButton {
 
     /**
      * HechizosButton
-     * Este metodo constructor se encarga 
+     * Este metodo constructor se encarga de construir los botrones de hechizos y secretos,
+     * así como de ponerlos visibles o invisibles
      */
     public HechizosButton(){
         super();
         this.setVisible(true);
     }
+
+    /**
+     * HechizosButton
+     * Este metodo constructor se encarga de construir los botrones de hechizos y secretos,
+     * así como de ponerlos visibles o invisibles y colocarle un nombre especifico al botón
+     * @param hechizo Un objeto de tipo Hechizos
+     */
     public HechizosButton(Hechizos hechizo){
         this.setVisible(true);
         this.setName(hechizo.getName());
         this.setOpaque(false);
     }
+
+    /**
+     * HechizosButton
+     * Este metodo constructor se encarga de construir los botrones de hechizos y secretos,
+     * así como de ponerle un nombre especifico al botón
+     * @param name Un string que será el nombre del botón
+     */
     public HechizosButton(String name){
         super(name);
     }

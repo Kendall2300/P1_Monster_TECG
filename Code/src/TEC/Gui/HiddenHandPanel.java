@@ -7,21 +7,49 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
+/**
+ * HiddenHandPanel
+ * Este metodo se encarga de controlar el panel del jugador que se encontrará en oculto ante el jugador contrario
+ *
+ * @author Kendall Martinez && Daniel Montoya
+ * @version 1.8
+ */
 public class HiddenHandPanel extends JPanel {
     private ArrayList<CardButton> handButtons;
 
+    /**
+     * HiddenHandPanel
+     * Este metodo constructor definirá y actualizará el panel del jugador que se encuentra oculto
+     * @param p Un objeto tipo Player
+     */
     public HiddenHandPanel(Player p){
         super();
         update(p);
     }
 
+    /**
+     * getHandButtons
+     * Este metodo se encarga de obtener los valores de los botones que se encuentran en la mano
+     * @return Un array de tipo CardButton
+     */
     public ArrayList<CardButton>getHandButtons(){
         return this.handButtons;
     }
+
+    /**
+     * setHandButtons
+     * Este metodo se encarga de definir los valores de los botones que se encuentran en la mano
+     * @param hb Un array de tipo CardButton
+     */
     public void setHandButtons(ArrayList<CardButton>hb){
         this.handButtons=hb;
     }
 
+    /**
+     * update
+     * Este metodo se encarga de actualizar la mano del jugador que es pasado como parámetro para ponerla en invisible
+     * @param p Un objeto de tipo Player
+     */
     public void update(Player p){
         this.removeAll();
         this.revalidate();
