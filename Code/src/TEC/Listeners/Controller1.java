@@ -22,6 +22,12 @@ import java.awt.event.MouseListener;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * Controller1
+ * Esta clase se encarga de generar hilos y escuchar ante cualquier acción que suceda durante la ejecucuón del juego.
+ * @author Kendall Martinez && Daniel Montoya
+ * @version 1.8
+ */
 public class Controller1 implements ActionListener, MouseListener {
     private JButton fc;
     private JButton sc;
@@ -30,6 +36,12 @@ public class Controller1 implements ActionListener, MouseListener {
     private Gui gui;
     private int summon;
 
+    /**
+     * Controller1
+     * Este metodo constructor  llama a otros metodos de la misma clase para intentar fucionar como un listener
+     * @param board Un objeto tipo Board que será el tablero de juego
+     * @param gui Un objeto de tipo Gui que será la gui del juego
+     */
     public Controller1(Board board, Gui gui) {
         this.board = board;
         this.gui = gui;
@@ -38,6 +50,11 @@ public class Controller1 implements ActionListener, MouseListener {
         gui.getNextphase().addActionListener(this);
     }
 
+    /**
+     * addActionListeners
+     * Esta clase implementa el action listener que hace o permite que la
+     * clase esté al pendiente de todas las acciones durante la ejecución del juego
+     */
     public void addActionListeners() {
         ArrayList<EsbirrosButton> handp1 = this.gui.getHandp1().getEsbirrosButtons();
         ArrayList<EsbirrosButton> handp2 = this.gui.getHandp2().getEsbirrosButtons();
@@ -91,11 +108,23 @@ public class Controller1 implements ActionListener, MouseListener {
         }
     }
 
+    /**
+     * mouseClicked
+     * Este metodo revisa constantemente si el mouse ha clickeado alguna instancia
+     * que esté siendo escuchado por esta clase
+     * @param e Un objeto de tipo MouseEvent
+     */
     @Override
     public void mouseClicked(MouseEvent e) {
 
     }
 
+    /**
+     * mouseEntered
+     * Este metodo revisa constantemente si el mouse entra en contacto con alguna instancia
+     * del juego de la cual está pendiente la clase
+     * @param e Un objeto de tipo MouseEvenet
+     */
     @Override
     public void mouseEntered(MouseEvent e) {
         if (e.getSource() instanceof EsbirrosButton) {
@@ -130,20 +159,44 @@ public class Controller1 implements ActionListener, MouseListener {
         }
     }
 
+    /**
+     * mouseExited
+     * Este metodo esta atento si el mouse ha dejado de estar en contacto con alguna
+     * instancia de la cual la clase está pendiente
+     * @param e Un objeto de tipo MouseEvent
+     */
     @Override
     public void mouseExited(MouseEvent e) {
     }
 
+    /**
+     * mousePressed
+     * Este metodo esta atento si el mouse ha presionado alguna
+     * instancia de la cual la clase está pendiente
+     * @param e Un objeto de tipo MouseEvent
+     */
     @Override
     public void mousePressed(MouseEvent e) {
 
     }
 
+    /**
+     * mouseReleased
+     * Este metodo esta atento si el mouse ha liberado alguna
+     * instancia de la cual la clase está pendiente
+     * @param e Un objeto de tipo MouseEvent
+     */
     @Override
     public void mouseReleased(MouseEvent e) {
 
     }
 
+    /**
+     * updatefield
+     * Este metodo se encarga de actualizar el campo de los jugadores despues de cada acción
+     * tambien contiene opciones para después de terminar la partida y reiniciar el tablero
+     * para jugar otra partida sin cerrar la conección con el servidor.
+     */
     private void updatefield() {
         if (board.isGameOver()) {
             Object[] options = {"End Game!", "Start New Game"};
@@ -272,6 +325,13 @@ public class Controller1 implements ActionListener, MouseListener {
         gui.revalidate();
     }
 
+    /**
+     * actionPerformed
+     * Esta clase revisa si alguno de todos los eventos ocurridos tiene que seguir de
+     * algún tipo de lógica para realizar acciones. De ser así esta clase aplica la accion
+     * que sea necesaria según su definiciones
+     * @param e Un objeto de tipo MouseEvent
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() instanceof NextPhaseButton) {
