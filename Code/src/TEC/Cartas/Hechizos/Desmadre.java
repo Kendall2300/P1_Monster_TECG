@@ -29,6 +29,11 @@ public class Desmadre extends Hechizos{
     public void action(Esbirros esbirro) { //Completo
         int lp=getBoard().getOpponentPlayer().getLifePoints();
         int lp_to_lose = (int) Math.floor(Math.random()*(1-1000+1)+1000);
-        getBoard().getOpponentPlayer().setLifePoints(lp-lp_to_lose);
+        if ((lp-lp_to_lose)<=0){
+            getBoard().setWinner(getBoard().getOpponentPlayer());
+        }else{
+            getBoard().getPlayer().setLifePoints(lp-lp_to_lose);
+        }
+
     }
 }

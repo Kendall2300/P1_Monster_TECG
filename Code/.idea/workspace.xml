@@ -83,7 +83,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Descargas/yu-gi-oh-java-master" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -125,17 +125,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="gson-2.8.2.jar" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/lib/gson-2.8.2.jar" />
       <method v="2" />
@@ -172,13 +161,11 @@
       <workItem from="1604628174614" duration="9469000" />
       <workItem from="1604672186144" duration="14656000" />
       <workItem from="1604695010977" duration="8082000" />
-<<<<<<< HEAD
       <workItem from="1604711516720" duration="4059000" />
       <workItem from="1604717797928" duration="112000" />
       <workItem from="1604717921655" duration="8391000" />
-=======
       <workItem from="1604711516720" duration="9997000" />
->>>>>>> refs/remotes/origin/clases_cartas
+      <workItem from="1604870325720" duration="4200000" />
     </task>
     <servers />
   </component>
@@ -227,33 +214,33 @@
       <screen x="0" y="0" width="1360" height="768" />
     </state>
     <state x="597" y="137" key="#xdebugger.XInspectDialog/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604450873365" />
-    <state x="386" y="125" key="FileChooserDialogImpl" timestamp="1604632536228">
+    <state x="386" y="125" key="FileChooserDialogImpl" timestamp="1604870440024">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state x="386" y="125" key="FileChooserDialogImpl/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604632536228" />
-    <state width="1315" height="59" key="GridCell.Tab.0.bottom" timestamp="1604718862996">
+    <state x="386" y="125" key="FileChooserDialogImpl/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604870440024" />
+    <state width="1315" height="59" key="GridCell.Tab.0.bottom" timestamp="1604874528731">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
     <state width="1315" height="239" key="GridCell.Tab.0.bottom/0.0.1360.768/-733.-768.1360.768@-733.-768.1360.768" timestamp="1604634838858" />
-    <state width="1315" height="59" key="GridCell.Tab.0.bottom/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604718862996" />
+    <state width="1315" height="59" key="GridCell.Tab.0.bottom/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604874528731" />
     <state width="1877" height="74" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1604708712034" />
-    <state width="1315" height="59" key="GridCell.Tab.0.center" timestamp="1604718862996">
+    <state width="1315" height="59" key="GridCell.Tab.0.center" timestamp="1604874528731">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
     <state width="1315" height="239" key="GridCell.Tab.0.center/0.0.1360.768/-733.-768.1360.768@-733.-768.1360.768" timestamp="1604634838858" />
-    <state width="1315" height="59" key="GridCell.Tab.0.center/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604718862996" />
+    <state width="1315" height="59" key="GridCell.Tab.0.center/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604874528731" />
     <state width="1877" height="74" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1604708712034" />
-    <state width="1315" height="59" key="GridCell.Tab.0.left" timestamp="1604718862996">
+    <state width="1315" height="59" key="GridCell.Tab.0.left" timestamp="1604874528731">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
     <state width="1315" height="239" key="GridCell.Tab.0.left/0.0.1360.768/-733.-768.1360.768@-733.-768.1360.768" timestamp="1604634838858" />
-    <state width="1315" height="59" key="GridCell.Tab.0.left/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604718862996" />
+    <state width="1315" height="59" key="GridCell.Tab.0.left/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604874528731" />
     <state width="1877" height="74" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1604708712034" />
-    <state width="1315" height="59" key="GridCell.Tab.0.right" timestamp="1604718862996">
+    <state width="1315" height="59" key="GridCell.Tab.0.right" timestamp="1604874528731">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
     <state width="1315" height="239" key="GridCell.Tab.0.right/0.0.1360.768/-733.-768.1360.768@-733.-768.1360.768" timestamp="1604634838858" />
-    <state width="1315" height="59" key="GridCell.Tab.0.right/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604718862996" />
+    <state width="1315" height="59" key="GridCell.Tab.0.right/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604874528731" />
     <state width="1877" height="74" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1604708712034" />
     <state width="1315" height="238" key="GridCell.Tab.1.bottom" timestamp="1604637653421">
       <screen x="0" y="0" width="1360" height="768" />

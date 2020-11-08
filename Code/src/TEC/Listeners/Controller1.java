@@ -6,10 +6,7 @@ import TEC.Cartas.Carta;
 import TEC.Cartas.Esbirros;
 import TEC.Cartas.Hechizos.Hechizos;
 import TEC.Cartas.Location;
-import TEC.Exceptions.EsbirrosMultipleAttackException;
-import TEC.Exceptions.NoEsbirrosSpaceException;
-import TEC.Exceptions.UnexpectedFormatException;
-import TEC.Exceptions.WrongPhaseException;
+import TEC.Exceptions.*;
 import TEC.Gui.*;
 
 import javax.imageio.IIOException;
@@ -432,23 +429,509 @@ public class Controller1 implements ActionListener, MouseListener {
                 sc=null;
                 tc=null;
                 headlessException.printStackTrace();
-                System.out.println("error head");
+                System.out.println("Error head");
             } catch (NoEsbirrosSpaceException noEsbirrosSpaceException) {
                 fc=null;
                 sc=null;
                 tc=null;
                 noEsbirrosSpaceException.printStackTrace();
-                System.out.println("erro space");
+                System.out.println("Error space");
             } catch (WrongPhaseException | EsbirrosMultipleAttackException wrongPhaseException) {
                 fc=null;
                 sc=null;
                 tc=null;
                 wrongPhaseException.printStackTrace();
-                System.out.println("Error mal phase");
+                System.out.println("Error mal fase");
             }
         }
         if(e.getSource() instanceof HechizosButton){
-            //else{//fc is spellbutton
+            //fc is spellbutton
+            if(fc instanceof EsbirrosButton){
+                fc=null;
+                sc=null;
+                return;
+            }
+            if(fc==null){
+                if(board.getPlayer().getField().getHechizosArea().contains(((HechizosButton)e.getSource()).getHechizo())
+                        || board.getPlayer().getField().getHand().contains(((HechizosButton)e.getSource()).getHechizo())){
+                    if(((HechizosButton)e.getSource()).getHechizo().getLocation()==Location.Hand) {
+                        int mana_actual=board.getPlayer().getMana();
+                        String[] buttons = {"Activate", "Set", "Cancel"};
+                        int rc = JOptionPane.showOptionDialog(null, "Activate or set spell ?", "SpellCard",
+                                JOptionPane.WARNING_MESSAGE, 0, null, buttons, buttons[2]);
+                        HechizosButton button = (HechizosButton) e.getSource();
+                        Hechizos card = button.getHechizo();
+                        fc = button;
+                        if (rc == 1 && (mana_actual>= card.getMana_cost())) {
+                            try {
+                                Carta.getBoard().getPlayer().setHechizo(card);
+                            } catch (WrongPhaseException wrongPhaseException) {
+                                wrongPhaseException.printStackTrace();
+                            } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                noHechizosSpaceException.printStackTrace();
+                            }
+                            fc = null;
+                            updatefield();
+                            return;
+                        }
+                        if (rc==2){
+                            fc=null;
+                            return;
+                        }else {
+                            int mana_to_loose= card.getMana_cost();
+                            board.getPlayer().setMana(mana_actual-mana_to_loose);
+                            switch (card.getName()){
+                                case "Aguante":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "ChocoMilk":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "CilindrosMagicos":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "Congelar":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "Curar":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "Desmadre":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "DonDuende":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "El_Gran_Keto":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "ElLoco":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "ElVendado":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "FrioPolar":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "HerramientasBrayan":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "Joker":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "LlamadaImpura":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "NegarTurno":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "PoderSupremo":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "RobarOponente":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "RoboMagico":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "SoloPostres":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                            }
+                        }
+                    }
+                    else {
+                        int mana_actual=board.getPlayer().getMana();
+                        String[] buttons={"ok","cancel"};
+                        int rc=JOptionPane.showOptionDialog(null, "Activate spell card ?", "SpellCard",
+                                JOptionPane.WARNING_MESSAGE, 0, null, buttons, buttons[1]);
+                        HechizosButton button=(HechizosButton)e.getSource();
+                        Hechizos card=button.getHechizo();
+                        if (rc==1&& mana_actual>= card.getMana_cost()){
+                            try {
+                                Carta.getBoard().getPlayer().setHechizo(card);
+                            } catch (WrongPhaseException wrongPhaseException) {
+                                wrongPhaseException.printStackTrace();
+                            } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                noHechizosSpaceException.printStackTrace();
+                            }
+                            int mana_to_loose= card.getMana_cost();
+                            board.getPlayer().setMana(mana_actual-mana_to_loose);
+                            fc=null;
+                            updatefield();
+                            return;
+                        }else{
+                            int mana_to_loose= card.getMana_cost();
+                            board.getPlayer().setMana(mana_actual-mana_to_loose);
+                            switch (card.getName()){
+                                case "Aguante":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "ChocoMilk":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    board.getPlayer().setMana(mana_actual-mana_to_loose);
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "CilindrosMagicos":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "Congelar":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "Curar":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "Desmadre":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "DonDuende":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "El_Gran_Keto":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "ElLoco":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "ElVendado":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "FrioPolar":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "HerramientasBrayan":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "Joker":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "LlamadaImpura":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "NegarAtaque":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "NegarTurno":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "PoderSupremo":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "RoboMagico":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                                case "SoloPostres":
+                                    try {
+                                        board.getPlayer().activateHechizo(card,null);
+                                    } catch (WrongPhaseException wrongPhaseException) {
+                                        wrongPhaseException.printStackTrace();
+                                    } catch (NoHechizosSpaceException noHechizosSpaceException) {
+                                        noHechizosSpaceException.printStackTrace();
+                                    }
+                                    updatefield();
+                                    fc=null;
+                                    return;
+                            }
+                        }
+                    }
+                }
+            }
             System.out.println("Pasando...");
         }
     }
