@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"TEC.Board"},{"l":"TEC.Board.Player"},{"l":"TEC.Board.Player.ListaDoble"},{"l":"TEC.Cartas"},{"l":"TEC.Cartas.Hechizos"},{"l":"TEC.Exceptions"},{"l":"TEC.Gui"},{"l":"TEC.Listeners"}]

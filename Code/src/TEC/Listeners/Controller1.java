@@ -1,6 +1,7 @@
 package TEC.Listeners;
 
 import TEC.Board.Board;
+import TEC.Board.Player.ListaDoble.LinkedList;
 import TEC.Board.Player.Phase;
 import TEC.Cartas.Carta;
 import TEC.Cartas.Esbirros;
@@ -8,8 +9,10 @@ import TEC.Cartas.Hechizos.Hechizos;
 import TEC.Cartas.Location;
 import TEC.Exceptions.*;
 import TEC.Gui.*;
+import TEC.Board.Player.ListaDoble.Node.*;
 
 import javax.imageio.IIOException;
+import javax.sound.midi.SysexMessage;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -17,7 +20,9 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.IOException;
+import java.security.PrivateKey;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Controller1
@@ -32,6 +37,8 @@ public class Controller1 implements ActionListener, MouseListener {
     private Board board;
     private Gui gui;
     private int summon;
+    String x = "Historial de Jugadas";
+
 
     /**
      * Controller1
@@ -339,9 +346,15 @@ public class Controller1 implements ActionListener, MouseListener {
         if (e.getSource() instanceof EndTurnButton) {
             int actual_mana=board.getPlayer().getMana();
             //int mana_to_win=250;
-            board.getPlayer().setMana(actual_mana+250);
+
+            if (actual_mana+250 >= 1000){
+                board.getPlayer().setMana(1000);
+            }else{
+                board.getPlayer().setMana(actual_mana+250);
+            }
             board.getPlayer().endTurn();
             updatefield();
+
         }
         if (e.getSource() instanceof EsbirrosButton) {
             try {
@@ -362,6 +375,10 @@ public class Controller1 implements ActionListener, MouseListener {
                         }
                         if(monster.getMana_cost() <= Carta.getBoard().getPlayer().getMana()){
                             if (summon==0){
+
+                                gui.getHistorial().setText("<html>"+ board.getPlayer().getName() + "<br>" + " ha jugado: " + monster.getName()+"<html>");
+
+
                                 int mana_to_lose = monster.getMana_cost();
                                 int actual_mana = Carta.getBoard().getPlayer().getMana();
                                 Carta.getBoard().getPlayer().summonEsbirro(monster);
@@ -387,11 +404,15 @@ public class Controller1 implements ActionListener, MouseListener {
                                     fc = null;
                                     sc = null;
                                     tc = null;
+
+
                                     return;
                                 }
                                 if (board.getOpponentPlayer().getField().getEsbirrosArea().size() == 0) {
+                                    gui.getHistorial().setText("<html>"+ board.getPlayer().getName() + "<br>" + " atacó con: " + monster.getName()+"<html>");
                                     board.getPlayer().declareAttack(((EsbirrosButton)fc).getEsbirro());
                                     fc = null;
+
                                     updatefield();
                                     return;
                                 }
@@ -417,6 +438,7 @@ public class Controller1 implements ActionListener, MouseListener {
                                 fc=null;
                                 sc=null;
                                 tc=null;
+                                gui.getHistorial().setText("<html>"+ board.getPlayer().getName() + "<br>" + " Atacó con: " + monster.getName()+"<html>");
                                 updatefield();
                                 return;
                             }
@@ -463,6 +485,7 @@ public class Controller1 implements ActionListener, MouseListener {
                         Hechizos card = button.getHechizo();
                         fc = button;
                         if (rc == 1 && (mana_actual>= card.getMana_cost())) {
+                            gui.getHistorial().setText("<html>"+ board.getPlayer().getName() + "<br>" + " colocó: " + card.getName()+"<html>");
                             try {
                                 Carta.getBoard().getPlayer().setHechizo(card);
                             } catch (WrongPhaseException wrongPhaseException) {
@@ -478,6 +501,7 @@ public class Controller1 implements ActionListener, MouseListener {
                             fc=null;
                             return;
                         }else {
+                            gui.getHistorial().setText("<html>"+ board.getPlayer().getName() + "<br>" + " activó: " + card.getName()+"<html>");
                             int mana_to_loose= card.getMana_cost();
                             board.getPlayer().setMana(mana_actual-mana_to_loose);
                             switch (card.getName()){
@@ -701,6 +725,7 @@ public class Controller1 implements ActionListener, MouseListener {
                         HechizosButton button=(HechizosButton)e.getSource();
                         Hechizos card=button.getHechizo();
                         if (rc==1&& mana_actual>= card.getMana_cost()){
+                            gui.getHistorial().setText("<html>"+ board.getPlayer().getName() + "<br>" + " ha activado: " + card.getName()+"<html>");
                             try {
                                 Carta.getBoard().getPlayer().setHechizo(card);
                             } catch (WrongPhaseException wrongPhaseException) {
@@ -713,7 +738,7 @@ public class Controller1 implements ActionListener, MouseListener {
                             fc=null;
                             updatefield();
                             return;
-                        }else{
+                        }else if(mana_actual >= card.getMana_cost()){
                             int mana_to_loose= card.getMana_cost();
                             board.getPlayer().setMana(mana_actual-mana_to_loose);
                             switch (card.getName()){
@@ -932,7 +957,6 @@ public class Controller1 implements ActionListener, MouseListener {
                     }
                 }
             }
-            System.out.println("Pasando...");
         }
     }
 }

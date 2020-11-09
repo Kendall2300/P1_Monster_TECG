@@ -24,39 +24,10 @@
   <component name="ChangeListManager">
     <list default="true" id="65f92b63-1343-4aeb-b835-fb597dee7586" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/Aguante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/Aguante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/ChocoMilk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/ChocoMilk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/CilindrosMagicos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/CilindrosMagicos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/Congelar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/Congelar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/Curar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/Curar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/Desmadre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/Desmadre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/DonDuende.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/DonDuende.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/ElLoco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/ElLoco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/ElVendado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/ElVendado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/El_gran_Keto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/El_gran_Keto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/FrioPolar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/FrioPolar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/Hechizos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/Hechizos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/HerramientasBrayan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/HerramientasBrayan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/Joker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/Joker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/LlamadaImpura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/LlamadaImpura.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/NegarAtaque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/NegarAtaque.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/NegarTurno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/NegarTurno.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/PoderSupremo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/PoderSupremo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/RobarOponente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/RobarOponente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/RoboMagico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/RoboMagico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/SoloPostres.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Cartas/Hechizos/SoloPostres.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Exceptions/EmptyFieldException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Exceptions/EmptyFieldException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Exceptions/EsbirrosMultipleAttackException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Exceptions/EsbirrosMultipleAttackException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Exceptions/MissingFieldException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Exceptions/MissingFieldException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Exceptions/NoEsbirrosSpaceException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Exceptions/NoEsbirrosSpaceException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Exceptions/NoHechizosSpaceException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Exceptions/NoHechizosSpaceException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Exceptions/NoSecretosSpaceException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Exceptions/NoSpaceException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Exceptions/NoSpaceException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Exceptions/UnexpectedFormatException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Exceptions/UnexpectedFormatException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Exceptions/UnknownCartaTypeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Exceptions/UnknownCartaTypeException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Exceptions/UnknownHechizosException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Exceptions/UnknownHechizosException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Exceptions/UnknownSecretosException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEC/Exceptions/WrongPhaseException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Exceptions/WrongPhaseException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEC/Board/Player/ListaDoble/ListCircD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Board/Player/ListaDoble/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEC/Board/Player/ListaDoble/Nodo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Board/Player/ListaDoble/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEC/Gui/Gui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Gui/Gui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEC/Listeners/Controller1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEC/Listeners/Controller1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +54,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Descargas/yu-gi-oh-java-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -121,6 +92,17 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -166,6 +148,7 @@
       <workItem from="1604717921655" duration="8391000" />
       <workItem from="1604711516720" duration="9997000" />
       <workItem from="1604870325720" duration="4200000" />
+      <workItem from="1604875800703" duration="6609000" />
     </task>
     <servers />
   </component>
@@ -218,30 +201,30 @@
       <screen x="0" y="0" width="1360" height="768" />
     </state>
     <state x="386" y="125" key="FileChooserDialogImpl/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604870440024" />
-    <state width="1315" height="59" key="GridCell.Tab.0.bottom" timestamp="1604874528731">
-      <screen x="0" y="0" width="1360" height="768" />
+    <state width="1877" height="301" key="GridCell.Tab.0.bottom" timestamp="1604882413372">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1315" height="239" key="GridCell.Tab.0.bottom/0.0.1360.768/-733.-768.1360.768@-733.-768.1360.768" timestamp="1604634838858" />
     <state width="1315" height="59" key="GridCell.Tab.0.bottom/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604874528731" />
-    <state width="1877" height="74" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1604708712034" />
-    <state width="1315" height="59" key="GridCell.Tab.0.center" timestamp="1604874528731">
-      <screen x="0" y="0" width="1360" height="768" />
+    <state width="1877" height="301" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1604882413372" />
+    <state width="1877" height="301" key="GridCell.Tab.0.center" timestamp="1604882413372">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1315" height="239" key="GridCell.Tab.0.center/0.0.1360.768/-733.-768.1360.768@-733.-768.1360.768" timestamp="1604634838858" />
     <state width="1315" height="59" key="GridCell.Tab.0.center/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604874528731" />
-    <state width="1877" height="74" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1604708712034" />
-    <state width="1315" height="59" key="GridCell.Tab.0.left" timestamp="1604874528731">
-      <screen x="0" y="0" width="1360" height="768" />
+    <state width="1877" height="301" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1604882413372" />
+    <state width="1877" height="301" key="GridCell.Tab.0.left" timestamp="1604882413372">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1315" height="239" key="GridCell.Tab.0.left/0.0.1360.768/-733.-768.1360.768@-733.-768.1360.768" timestamp="1604634838858" />
     <state width="1315" height="59" key="GridCell.Tab.0.left/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604874528731" />
-    <state width="1877" height="74" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1604708712034" />
-    <state width="1315" height="59" key="GridCell.Tab.0.right" timestamp="1604874528731">
-      <screen x="0" y="0" width="1360" height="768" />
+    <state width="1877" height="301" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1604882413372" />
+    <state width="1877" height="301" key="GridCell.Tab.0.right" timestamp="1604882413372">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1315" height="239" key="GridCell.Tab.0.right/0.0.1360.768/-733.-768.1360.768@-733.-768.1360.768" timestamp="1604634838858" />
     <state width="1315" height="59" key="GridCell.Tab.0.right/0.0.1360.768/-733.-768.1360.768@0.0.1360.768" timestamp="1604874528731" />
-    <state width="1877" height="74" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1604708712034" />
+    <state width="1877" height="301" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1604882413372" />
     <state width="1315" height="238" key="GridCell.Tab.1.bottom" timestamp="1604637653421">
       <screen x="0" y="0" width="1360" height="768" />
     </state>

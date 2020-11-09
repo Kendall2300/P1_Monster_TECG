@@ -49,6 +49,7 @@ public class Gui extends JFrame {
     private JLabel description;
     private JScrollPane sp1;
     private JScrollPane sp2;
+    private JLabel historial;
 
     /**
      * getSp1
@@ -518,6 +519,17 @@ public class Gui extends JFrame {
         this.pan = pan;
     }
 
+
+    public JLabel getHistorial() {
+        return historial;
+    }
+
+    public void setHistorial(JLabel historial) {
+        this.historial = historial;
+    }
+
+
+
     /**
      * Gui
      * Este es el metodo constructor de la clase que se encargará de establecer los parámetros y construir el objeto.
@@ -560,6 +572,9 @@ public class Gui extends JFrame {
         endturn = new EndTurnButton("End Turn");
         p1name = new JLabel(p1.getName());
         p2name = new JLabel(p2.getName());
+
+        historial = new JLabel("Historial");
+
         gravep1 = new JButton();
         gravep2 = new JButton();
         lifep1 = new JLabel("Life Points:" + p1.getLifePoints()+"\nMana:"+p1.getMana());
@@ -574,6 +589,9 @@ public class Gui extends JFrame {
         deckp1.setForeground(Color.WHITE);
         deckp2.setFont(new Font("Ariel", Font.BOLD, 15));
         deckp2.setForeground(Color.WHITE);
+
+
+
         ImageIcon grave = new ImageIcon("src/Imagenes/Graveyard.png");
         gravep1.setIcon(grave);
         gravep2.setIcon(grave);
@@ -603,6 +621,8 @@ public class Gui extends JFrame {
         panel1.add(monsterareap1, BorderLayout.NORTH);
         panel1.add(spellAreap1, BorderLayout.CENTER);
         panel1.setOpaque(false);
+
+
 
 
         if (p1 == Carta.getBoard().getPlayer()) {
@@ -666,6 +686,8 @@ public class Gui extends JFrame {
         panel3.add(nextphase);
         panel3.add(lifep1);
         panel3.add(p1name);
+        panel3.add(historial);
+
         this.add(panel3);
         panel3.setBounds(0, 0, 200, 700);
         p2name.setBounds(2, 150, 311, 57);
@@ -674,6 +696,10 @@ public class Gui extends JFrame {
         nextphase.setBounds(5, 400, 157, 39);
         p1name.setBounds(2, 500, 311, 57);
         lifep1.setBounds(2, 550, 311, 57);
+        historial.setBounds(0,315,400,100);
+        historial.setAutoscrolls(true);
+
+
 
 
         imgThisImg = new ImageIcon("src/Imagenes/Card Back.png");

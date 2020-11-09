@@ -1,0 +1,8 @@
+TEC.Board
+TEC.Board.Player
+TEC.Board.Player.ListaDoble
+TEC.Cartas
+TEC.Cartas.Hechizos
+TEC.Exceptions
+TEC.Gui
+TEC.Listeners
